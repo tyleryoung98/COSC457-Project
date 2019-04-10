@@ -1,0 +1,41 @@
+Main page:
+  Links to:
+    -Admin
+    -Company
+    -ATC
+    -Passenger
+    -Flight Listing
+
+Admin Page:
+  Input forms:
+    -Add runways
+    -Add aircraft
+    -Add Airport
+
+Company Page:
+  Input Forms:
+    -Add Flight
+    -Add pilots
+  View:
+    -All flights for the Company
+    -All pilots of the Company
+
+ATC Page:
+  View:
+    -Runways with status
+    -Flights and times
+    -Airport
+
+Passenger:
+  Input form:
+    -Passenger info
+    -Flight number
+    -class
+  Views:
+    -Flight specific info
+    -Ticket info
+
+Flight Listing Page:
+  View:
+    -a list of all flights with origin/dest
+    
