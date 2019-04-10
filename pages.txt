@@ -38,4 +38,6 @@ Passenger:
 Flight Listing Page:
   View:
     -a list of all flights with origin/dest
-    
+    -allow user to get specific info on a flight(more info link next to listing)
+  Inputs:
+    -search airports
