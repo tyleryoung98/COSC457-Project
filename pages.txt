@@ -2,25 +2,37 @@ Main page:
   Links to:
     -Admin
     -Company
+    -Pilot
     -ATC
     -Passenger
     -Flight Listing
 
 Admin Page:
   Input forms:
-    -Add runways
-    -Add aircraft
+    -Add runways(open/closed)
     -Add Airport
 
 Company Page:
   Input Forms:
+    -add aircraft
     -Add Flight
     -Add pilots
+    -Add employees(maintenance)
+    -Add maintenance order
   View:
-    -All flights for the Company
-    -All pilots of the Company
+    -All employees
+    -all maintenance
+    -all aircraft
+
+Pilot Page:
+  Input Form:
+    -flight data
+  View:
+    -flight data
 
 ATC Page:
+  Input Form:
+    -frequencies
   View:
     -Runways with status
     -Flights and times
@@ -41,3 +53,9 @@ Flight Listing Page:
     -allow user to get specific info on a flight(more info link next to listing)
   Inputs:
     -search airports
+
+Flight Specific Page:
+  View:
+    -fligth info
+  Input Form:
+    -customer info
