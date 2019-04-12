@@ -43,6 +43,7 @@ Passenger:
     -Passenger info
     -Flight number
     -class
+    -Baggage weight
   Views:
     -Flight specific info
     -Ticket info
