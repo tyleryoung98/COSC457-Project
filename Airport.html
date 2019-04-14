@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Create an Account</title>
+    <title>Airport</title>
 
         <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="createAcc.css">
@@ -15,13 +15,76 @@
     <img src="airport.jpg" id ="Airport">
     <hr>
 
-    <p>Country: United States</p>
-    <p>City: Baltimore</p>
-    <p>Airport Code: 123456789</p>
+    <h3>Country: United States</h3>
+    <h3>City: Baltimore</h3>
+    <h3>Airport Code: 123456789</h3>
+
+    <style>
+    table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    }
+    th, td {
+    padding: 5px;
+    text-align: left;
+    }
+    </style>
+    </head>
+    <body>
+
+    <table style="width:75%">
+    <h3>Open Runways</h3>
+    <tr>
+      <th>Airport Code</th>
+      <th>Runway ID</th>
+      <th>Length</th>
+    </tr>
+    <tr>
+      <td>Test</td>
+      <td>Test</td>
+      <td>Test</td>
+    </tr>
+    <tr>
+      <td>Test</td>
+      <td>Test</td>
+      <td>Test</td>
+    </tr>
+    </table>
+
+    <table style="width:75%">
+    <h3>Closed Runways</h3>
+    <tr>
+      <th>Airport Code</th>
+      <th>Runway ID</th>
+      <th>Length</th>
+    </tr>
+    <tr>
+      <td>Test</td>
+      <td>Test</td>
+      <td>Test</td>
+    </tr>
+    <tr>
+      <td>Test</td>
+      <td>Test</td>
+      <td>Test</td>
+    </tr>
+    </table>
+
+    <h3 class="colorWhite">Please fill in this form to register a new runway status.</h3>
+    <hr>
+
+    <label for="Airport_Code"><b class="colorWhite">Airport Code:</b></label>
+    <input type="Airport_Code" placeholder="Enter Airport Code" name="Airport_Code" required>
+
+    <label for="Runway_ID"><b class="colorWhite">Runway ID:</b></label>
+    <input type="text" placeholder="Runway ID" name="Runway_ID" required>
+
+    <label for="Length"><b class="colorWhite">Length:</b></label>
+    <input type="Length" placeholder="Length" name="Length" required>
 
     </div>
   </div>
 </form>
 
-  </body>         
+  </body>
 </html>
