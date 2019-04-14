@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Airplanes</title>
+
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="createAcc.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Poppins" rel="stylesheet">
+  </head>
+  <body>
+  <form action="/signup" method="POST" style="border:1px solid #ccc">
+  <div class="container">
+    <h1 class="colorWhite">Registered Airplanes</h1>
+    <img src="airport.jpg" id ="Airport">
+
+      <style>
+      table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      }
+      th, td {
+      padding: 5px;
+      text-align: left;
+      }
+      </style>
+      </head>
+      <body>
+
+      <table style="width:75%">
+      <h1>List of Planes</h1>
+      <tr>
+        <th>Tail Number</th>
+        <th>Type</th>
+        <th>Flight Hours</th>
+        <th>Company</th>
+        <th>Max Takeoff Weight</th>
+        <th>Max Landing Weight</th>
+        <th>Capacity</th>
+        <th>Max Cargo Weight</th>
+      </tr>
+      <tr>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+      </tr>
+      <tr>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+      </tr>
+      </table>
+
+    <h1 class="colorWhite">Please fill in this form to register a new airplane.</h1>
+    <hr>
+
+    <label for="Tail_number"><b class="colorWhite">Tail Number:</b></label>
+    <input type="Tail_number" placeholder="Enter Tail Number" name="Tail_number" required>
+
+    <label for="Type"><b class="colorWhite">Type:</b></label>
+    <input type="text" placeholder="Type" name="Type" required>
+
+    <label for="Flight_hours"><b class="colorWhite">Flight Hours:</b></label>
+    <input type="text" placeholder="Flight Hours" name="Flight_hours" required>
+
+    <label for="Company"><b class="colorWhite">Company:</b></label>
+    <input type="Company" placeholder="Company" name="Company" required><br><br>
+
+    <label for="MaxTOWeight"><b class="colorWhite">Max Take Off Weight:</b></label>
+    <input type="MaxTOWeight" placeholder="Max Take Off Weight" name="MaxTOWeight" required>
+
+    <label for="MaxLandWeight"><b class="colorWhite">Max Landing Weight:</b></label>
+    <input type="MaxLandWeight" placeholder="Max Landing Weight" name="MaxLandWeight" required>
+
+    <label for="Capacity"><b class="colorWhite">Capacity:</b></label>
+    <input type="Capacity" placeholder="Capacity" name="Capacity" required>
+
+    <label for="MaxCargoWeight"><b class="colorWhite">Max Cargo Weight:</b></label>
+    <input type="MaxCargoWeight" placeholder="Max Cargo Weight" name="MaxCargoWeight" required>
+
+    <button type="submit" class="signupbtn"><b class = "colorBlack">Sign Up</b></button>
+    </div>
+  </div>
+</form>
+  </body>
+</html>
