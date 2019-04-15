@@ -10,5 +10,12 @@ module.exports = function(){
     });
   });
 
+  router.post('/airplane', function(req, res){
+    console.log(req.body);
+    const{tail_no,type,flight_hours,company,maxTOWeight,maxLandWeight,capacity,maxCargoWeight} = req.body;
+    dbedits.addAirplane(tail_no,type,flight_hours,company,maxTOWeight,maxLandWeight,capacity,maxCargoWeight).then(()=>{
+      res.redirect('/app/admin.html');
+    });
+  });
 
 }
