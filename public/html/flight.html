@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|Poppins" rel="stylesheet">
   </head>
   <body>
-  <form action="/flights" method="POST" style="border:1px solid #ccc">
   <div class="container">
     <h1 class="colorWhite">Flights</h1>
     <img src="airport.jpg" id ="Airport">
@@ -57,36 +56,36 @@
         <td>Test</td>
       </tr>
       </table>
-
+      <form action="/flights" method="POST" style="border:1px solid #ccc">
     <h4 class="colorWhite">Please fill in this form to register a new flight.</h4>
     <hr>
 
-    <label for="Flight_number"><b class="colorWhite">Flight Number:</b></label>
-    <input type="Flight_number" placeholder="Enter Flight Number" name="flight_no" required>
+    <label for="flight_number"><b class="colorWhite">Flight Number:</b></label>
+    <input type="text" placeholder="Enter Flight Number" name="flight_no" required>
 
-    <label for="Tail_number"><b class="colorWhite">Tail Number:</b></label>
+    <label for="tail_number"><b class="colorWhite">Tail Number:</b></label>
     <input type="text" placeholder="Tail Number" name="tail_no" required>
 
-    <label for="Origin"><b class="colorWhite">Origin:</b></label>
-    <input type="Origin" placeholder="Origin" name="origin" required>
+    <label for="origin"><b class="colorWhite">Origin:</b></label>
+    <input type="text" placeholder="Origin" name="origin" required>
 
-    <label for="Destination"><b class="colorWhite">Destination:</b></label>
-    <input type="Destination" placeholder="Destination" name="dest" required><br><br>
+    <label for="dest"><b class="colorWhite">Destination:</b></label>
+    <input type="text" placeholder="Destination" name="dest" required><br><br>
 
-    <label for="TO_Time"><b class="colorWhite">Takeoff Time:</b></label>
-    <input type="TO_Time" placeholder="Takeoff Time" name="to_time" required>
+    <label for="to_time"><b class="colorWhite">Takeoff Time:</b></label>
+    <input type="time" placeholder="Takeoff Time" name="to_time" required>
 
-    <label for="Land_Time"><b class="colorWhite">Landing Time:</b></label>
-    <input type="Land_Time" placeholder="Landing Time" name="land_time" required>
+    <label for="land_time"><b class="colorWhite">Landing Time:</b></label>
+    <input type="time" placeholder="Landing Time" name="land_time" required>
 
-    <label for="Seats"><b class="colorWhite">Seats:</b></label>
-    <input type="Seats" placeholder="Seats" name="seats" required>
+    <label for="seats"><b class="colorWhite">Seats:</b></label>
+    <input type="number" placeholder="Seats" name="seats" required>
 
     <button type="submit" class="submit"><b class = "colorBlack">Submit</b></button><br><br>
-
+  </form>
     <a href="flightdata.html">Flight Data</a>
+
     </div>
   </div>
-</form>
   </body>
 </html>

@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|Poppins" rel="stylesheet">
   </head>
   <body>
-  <form action="/signup" method="POST" style="border:1px solid #ccc">
   <div class="container">
     <h1 class="colorWhite">Name of Airport</h1>
     <img src="airport.jpg" id ="Airport">
@@ -68,23 +67,28 @@
       <td>Test</td>
       <td>Test</td>
     </tr>
+    <form action="/runway" method="POST" style="border:1px solid #ccc">
     </table>
 
     <h4 class="colorWhite">Please fill in this form to register a new runway status.</h4>
     <hr>
 
-    <label for="Airport_Code"><b class="colorWhite">Airport Code:</b></label>
-    <input type="Airport_Code" placeholder="Enter Airport Code" name="Airport_Code" required>
+    <label for="airport_Code"><b class="colorWhite">Airport Code:</b></label>
+    <input type="text" placeholder="Enter Airport Code" name="airport_Code" required>
 
-    <label for="Runway_ID"><b class="colorWhite">Runway ID:</b></label>
-    <input type="text" placeholder="Runway ID" name="Runway_ID" required>
+    <label for="runway_ID"><b class="colorWhite">Runway ID:</b></label>
+    <input type="text" placeholder="Runway ID" name="runway_ID" required>
 
-    <label for="Length"><b class="colorWhite">Length:</b></label>
-    <input type="Length" placeholder="Length" name="Length" required>
+    <label for="length"><b class="colorWhite">Length:</b></label>
+    <input type="number" placeholder="Length" name="length" required>
+
+    <label for="status"><b class="colorWhite">Length:</b></label>
+    <input type="text" placeholder="Status" name="status" required>
 
     <button type="submit" class="submit"><b class = "colorBlack">Submit</b></button><br><br>
 
     <table style="width:75%">
+    </form>
     <h3>Gates</h3>
     <tr>
       <th>Sectione</th>
@@ -106,26 +110,26 @@
     </tr>
     </table>
 
+    <form action="/gate" method="POST" style="border:1px solid #ccc">
     <h4 class="colorWhite">Please fill in this form to register a new gate.</h4>
     <hr>
 
-    <label for="Section"><b class="colorWhite">Section:</b></label>
-    <input type="Section" placeholder="Enter Section" name="Section" required>
+    <label for="section"><b class="colorWhite">Section:</b></label>
+    <input type="text" placeholder="Enter Section" name="section" required>
 
-    <label for="Gate_ID"><b class="colorWhite">Gate ID:</b></label>
-    <input type="text" placeholder="Gate ID" name="Gate_ID" required>
+    <label for="gate_ID"><b class="colorWhite">Gate ID:</b></label>
+    <input type="text" placeholder="Gate ID" name="gate_ID" required>
 
-    <label for="Company"><b class="colorWhite">Company:</b></label>
-    <input type="Company" placeholder="Company" name="Company" required>
+    <label for="company"><b class="colorWhite">Company:</b></label>
+    <input type="text" placeholder="Company" name="company" required>
 
-    <label for="Airport_Code"><b class="colorWhite">Airport Code:</b></label>
-    <input type="Airport Code" placeholder="Airport Code" name="Airport_Code" required>
+    <label for="airport_Code"><b class="colorWhite">Airport Code:</b></label>
+    <input type="text" placeholder="Airport Code" name="airport_Code" required>
 
     <button type="submit" class="submit"><b class = "colorBlack">Submit</b></button><br><br>
-
+    </form>
     </div>
   </div>
-</form>
 
   </body>
 </html>

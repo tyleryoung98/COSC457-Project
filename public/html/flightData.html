@@ -9,7 +9,6 @@
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|Poppins" rel="stylesheet">
   </head>
   <body>
-  <form action="/signup" method="POST" style="border:1px solid #ccc">
   <div class="container">
     <h1 class="colorWhite">Flights</h1>
     <img src="airport.jpg" id ="Airport">
@@ -49,24 +48,25 @@
       </tr>
       </table>
 
+      <form action="/flightData" method="POST" style="border:1px solid #ccc">
     <h4 class="colorWhite">Please fill in this form to register a new flight data.</h4>
     <hr>
 
-    <label for="Flight_number"><b class="colorWhite">Flight Number:</b></label>
-    <input type="Flight_number" placeholder="Enter Flight Number" name="Flight_number" required>
+    <label for="flight_no"><b class="colorWhite">Flight Number:</b></label>
+    <input type="text" placeholder="Enter Flight Number" name="flight_no" required>
 
-    <label for="TO_weight"><b class="colorWhite">Takeoff Weight:</b></label>
-    <input type="text" placeholder="Takeoff Weight" name="TO_weight" required>
+    <label for="to_weight"><b class="colorWhite">Takeoff Weight:</b></label>
+    <input type="number" placeholder="Takeoff Weight" name="to_weight" required>
 
-    <label for="Fuel"><b class="colorWhite">Fuel:</b></label>
-    <input type="Fuel" placeholder="Origin" name="Fuel" required>
+    <label for="fuel"><b class="colorWhite">Fuel:</b></label>
+    <input type="number" placeholder="Fuel (lbs)" name="fuel" required>
 
-    <label for="Callsign"><b class="colorWhite">Callsign:</b></label>
-    <input type="Callsign" placeholder="Callsign" name="Callsign" required><br><br>
+    <label for="callsign"><b class="colorWhite">Callsign:</b></label>
+    <input type="text" placeholder="Callsign" name="callsign" required><br><br>
 
     <button type="submit" class="submit"><b class = "colorBlack">Submit</b></button>
+  </form>
     </div>
   </div>
-</form>
   </body>
 </html>
