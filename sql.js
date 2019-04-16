@@ -1,5 +1,15 @@
 const sql = require("mysql");
 
+const con = sql.createConnection({
+  host:"localhost",
+  user:"username",
+  password:"password"
+});
+con.connect(function(err) {
+  if(err) throw err;
+  console.log('Connected to MySQL');
+});
+
 module.exports = class TableEdits{
 //--------------------FLIGHTS UPDATE/INSERT---------------------------
   addFlight(flight_no,tail_no,origin,dest,to_time,land_time,seats){
@@ -18,7 +28,7 @@ module.exports = class TableEdits{
                                     +","+origin+","+dest
                                     +","+to_time+","+land_time
                                     +","+seats+")";
-      sql.query(quer, function(err, result){
+      con.query(quer, function(err, result){
         if(err){
           console.log("Failed to insert into FLIGHTS");
           reject();
@@ -50,7 +60,7 @@ module.exports = class TableEdits{
                                     +","+company+","+maxTOWeight
                                     +","+maxLandWeight+","+capacity
                                     +","+maxCargoWeight+")";
-      sql.query(quer, function(err, result){
+      con.query(quer, function(err, result){
         if(err){
           console.log("Failed to insert into AIRPLANE");
           reject();
@@ -72,7 +82,7 @@ module.exports = class TableEdits{
                 " ELSE INSERT INTO RUNWAY (airport_Code,runway_ID,length,status)"
                                 +" VALUES ("+airport_Code+","+runway_ID
                                 +","+length+","+status+")";
-      sql.query(quer, function(err, result){
+      con.query(quer, function(err, result){
         if(err){
           console.log("Failed to insert into RUNWAY");
           reject();
@@ -95,7 +105,7 @@ module.exports = class TableEdits{
                 " ELSE INSERT INTO GATE (section,gate_ID,company,airport_Code)"
                                 +" VALUES ("+section+","+gate_ID
                                 +","+company+","+airport_Code+")";
-      sql.query(quer, function(err, result){
+      con.query(quer, function(err, result){
         if(err){
           console.log("Failed to insert into GATE");
           reject();
@@ -122,7 +132,7 @@ module.exports = class TableEdits{
                                 +" VALUES ("+employee_ID+","+name
                                 +","+company+","+flight_hours
                                 +","+position+","+flight_no+")";
-      sql.query(quer, function(err, result){
+      con.query(quer, function(err, result){
         if(err){
           console.log("Failed to insert into PILOT");
           reject();
@@ -135,7 +145,7 @@ module.exports = class TableEdits{
     });
   }
 
-//-------------------------GATE UPDATE/INSERT---------------------------------------
+//-------------------------FLIGHT DATA UPDATE/INSERT---------------------------------------
   addFlightData(flight_no,to_weight,fuel,callsign){
     return new Promise((resolve, reject)=> {
       var quer= "IF EXISTS (select * from FLIGHTDATA where flight_no="+flight_no+") "+
@@ -145,7 +155,7 @@ module.exports = class TableEdits{
                 " ELSE INSERT INTO FLIGHTDATA (flight_no,to_weight,fuel,callsign)"
                                 +" VALUES ("+flight_no+","+to_weight
                                 +","+fuel+","+callsign+")";
-      sql.query(quer, function(err, result){
+      con.query(quer, function(err, result){
         if(err){
           console.log("Failed to insert into FLIGHTDATA");
           reject();

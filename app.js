@@ -10,14 +10,4 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.use(express.static(__dirname + '/public'));
 
-var con = sql.createConnection({
-  host:"localhost",
-  user:"username",
-  password:"password"
-});
-//connect to mysql, then listen
-con.connect(function(err) {
-  if(err) throw err;
-  console.log('Connected to MySQL');
-  app.listen(3000, () => console.log('App listening'));
-});
+app.listen(3000, () => console.log('App listening'));
