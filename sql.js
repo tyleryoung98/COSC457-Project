@@ -167,4 +167,26 @@ module.exports = class TableEdits{
       });
     });
   }
+//******************************************************************************
+//                            END OF UPDATE/INSERTS
+//                            BEGINNING OF SELECTS
+//******************************************************************************
+
+//---------------------------------FLIGHTS GET----------------------------------
+  getFlights(){
+    return new Promise((resolve,reject) => {
+      var quer= "SELECT * FROM FLIGHTS"
+      con.query(quer,function(err,result){
+        if(err){
+          console.log("Failed to select from FLIGHTS");
+          reject();
+        }
+        else{
+          console.log("Info selected from FLIGHTS");
+          resolve(result);
+        }
+      });
+    });
+  }
+
 }
