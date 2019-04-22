@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const TableEdits = require('../sql.js');
 const dbedits = new TableEdits();
 
 module.exports = function(){

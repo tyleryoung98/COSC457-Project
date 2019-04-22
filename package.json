@@ -1,0 +1,24 @@
+{
+  "name": "cosc457-project",
+  "version": "1.0.0",
+  "description": "airport database project",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyleryoung98/COSC457-Project.git"
+  },
+  "author": "tyoung23",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tyleryoung98/COSC457-Project/issues"
+  },
+  "homepage": "https://github.com/tyleryoung98/COSC457-Project#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mysql": "^2.17.1"
+  }
+}
