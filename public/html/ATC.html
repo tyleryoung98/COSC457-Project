@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <title>Flight Data</title>
+    <title>Air Traffic Control</title>
     <link rel="stylesheet" href="../css.timely.css">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans|Poppins" rel="stylesheet">
   </head>
@@ -24,12 +24,12 @@
       </head>
       <body>
 
-      <form action="/flightData" method="POST" style="border:1px solid #ccc">
+      <form action="/frequencies" method="POST" style="border:1px solid #ccc">
       <h4 class="colorWhite">Air Traffic Control Form.</h4>
       <hr>
 
-      <label for="frequencies"><b class="colorWhite">Flight Number:</b></label>
-      <input type="text" placeholder="Enter Flight Number" name="flight_no" required>
+      <label for="frequencies"><b class="colorWhite">Frequencies:</b></label>
+      <input type="number" placeholder="Enter Frequencies" name="frequencies" required>
 
       <button type="submit" class="submit"><b class = "colorBlack">Submit</b></button>
       </form>
