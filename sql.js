@@ -1,10 +1,6 @@
 const sql = require("mysql");
 
-const con = sql.createConnection({
-  host:"localhost",
-  user:"tyoung23",
-  password:"COSC457db"
-});
+const con = sql.createConnection(process.env.JAWSDB_URL);
 con.connect(function(err) {
   if(err) throw err;
   console.log('Connected to MySQL');
