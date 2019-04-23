@@ -11,4 +11,4 @@ app.use(express.static(__dirname + '/public'));
 app.use('/', baseRoutes);
 
 
-app.listen(3000, () => console.log('App listening'));
+app.listen(process.env.PORT || 3000, () => console.log('App listening'));
