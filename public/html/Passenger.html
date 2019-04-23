@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Flights</title>
+
+        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="createAcc.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Poppins" rel="stylesheet">
+  </head>
+  <body>
+  <form action="/signup" method="POST" style="border:1px solid #ccc">
+  <div class="container">
+    <h1 class="colorWhite">Passenger Information</h1>
+    <img src="airport.jpg" id ="Airport">
+
+      <h3 class="colorWhite">Please fill in this form to see your flight info.</h3>
+      <hr>
+
+      <label for="FName"><b class="colorWhite">First Name:</b></label>
+      <input type="FName" placeholder="Enter First Name" name="FName" required>
+
+      <label for="LName"><b class="colorWhite">Last Name:</b></label>
+      <input type="LName" placeholder="Enter Last Name" name="LName" required>
+
+      <label for="CountryOfResidence"><b class="colorWhite">Country of Residence:</b></label>
+      <input type="CountryOfResidence" placeholder="Enter Country of Residence" name="CountryOfResidence" required>
+
+      <label for="Flight_number"><b class="colorWhite">Flight Number:</b></label>
+      <input type="Flight_number" placeholder="Enter Flight Number" name="Flight_number" required><br><br>
+
+      <label for="BWeight"><b class="colorWhite">Baggage Weight:</b></label>
+      <input type="BWeight" placeholder="Enter Baggage Weight" name="BWeight" required>
+
+      <button type="submit" class="submit"><b class = "colorBlack">Submit</b></button><br><br>
+
+      <style>
+      table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      }
+      th, td {
+      padding: 5px;
+      text-align: left;
+      }
+      </style>
+      </head>
+      <body>
+
+      <table style="width:75%">
+      <h3>Your Flight</h3>
+      <tr>
+        <th>Flight Number</th>
+        <th>Tail Number</th>
+        <th>Origin</th>
+        <th>Destination</th>
+        <th>Take Off Time</th>
+        <th>Landing Time</th>
+      </tr>
+      </table>
+    </div>
+  </div>
+</form>
+  </body>
+</html>
