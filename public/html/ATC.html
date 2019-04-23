@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Flight Data</title>
+    <link rel="stylesheet" href="../css.timely.css">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans|Poppins" rel="stylesheet">
+  </head>
+  <body>
+  <div class="container">
+    <h1 class="colorWhite">Air Traffic Control</h1>
+    <img src="../img/airport.jpg" id ="Airport">
+
+      <style>
+      table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      }
+      th, td {
+      padding: 5px;
+      text-align: left;
+      }
+      </style>
+      </head>
+      <body>
+
+      <form action="/flightData" method="POST" style="border:1px solid #ccc">
+      <h4 class="colorWhite">Air Traffic Control Form.</h4>
+      <hr>
+
+      <label for="frequencies"><b class="colorWhite">Flight Number:</b></label>
+      <input type="text" placeholder="Enter Flight Number" name="flight_no" required>
+
+      <button type="submit" class="submit"><b class = "colorBlack">Submit</b></button>
+      </form>
+
+      <table style="width:75%">
+      <h3>Air Traffic Control Info</h3>
+      <tr>
+        <th>Runway ID</th>
+        <th>Runway Status</th>
+        <th>Flight Number</th>
+        <th>Takeoff Time</th>
+        <th>Land Time</th>
+        <th>Origin</th>
+        <th>Destination</th>
+        <th>Airport</th>
+      </tr>
+      <tr>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+      </tr>
+      <tr>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+        <td>Test</td>
+      </tr>
+      </table>
+    </div>
+  </div>
+  </body>
+</html>
