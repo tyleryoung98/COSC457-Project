@@ -69,26 +69,31 @@
             </tr>
             </table>
 
-            <form action="/flightData" method="POST" style="border:1px solid #ccc">
           <h3 class="colorWhite"><b>Please fill in this form to register a new flight data:</b></h3>
           <hr>
+          <form method="post" action="#">
+            <div class="row gtr-uniform">
+              <div class="col-6 col-12-xsmall">
+                <input type="number" name="flight_number" id="flight_number" value="" placeholder="Enter Flight Number" required/>
+              </div>
+              <div class="col-6 col-12-xsmall">
+                <input type="number" name="to_weight" id="to_weight" value="" placeholder="Enter Takeoff Weight" required/>
+              </div>
+              <div class="col-6 col-12-xsmall">
+                <input type="number" name="fuel" id="fuel" value="" placeholder="Enter Fuel Amount (lbs)" required/>
+              </div>
+              <div class="col-6 col-12-xsmall">
+                <input type="text" name="callsign" id="callsign" value="" placeholder="Enter Callsign" required/>
+              </div>
+              <div class="col-12">
+                <ul class="actions">
+                  <li><input type="submit" value="Submit Form" class="primary" /></li>
+                  <li><input type="reset" value="Reset" /></li>
+                </ul>
+              </div>
+            </div>
+          </form>
 
-          <label for="flight_no"><b class="colorWhite">Flight Number:</b></label>
-          <input type="text" placeholder="Enter Flight Number" name="flight_no" required>
-
-          <label for="to_weight"><b class="colorWhite">Takeoff Weight:</b></label>
-          <input type="number" placeholder="Takeoff Weight" name="to_weight" required>
-
-          <label for="fuel"><b class="colorWhite">Fuel:</b></label>
-          <input type="number" placeholder="Fuel (lbs)" name="fuel" required>
-
-          <label for="callsign"><b class="colorWhite">Callsign:</b></label>
-          <input type="text" placeholder="Callsign" name="callsign" required><br><br>
-
-          <button type="submit" class="submit"><b class = "colorBlack">Submit</b></button>
-        </form>
-          </div>
-        </div>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/browser.min.js"></script>
   <script src="assets/js/breakpoints.min.js"></script>
