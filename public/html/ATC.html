@@ -30,62 +30,66 @@
       <h1>Air Traffic Control</h1>
     </div>
 
-      <style>
-      table, th, td {
-      border: 1px solid black;
-      border-collapse: collapse;
-      }
-      th, td {
-      padding: 5px;
-      text-align: left;
-      }
-      </style>
-      </head>
-      <body>
+		<section id="main" class="wrapper">
+			<div class="inner">
+				<div class="content">
 
-      <form action="/frequencies" method="POST" style="border:1px solid #ccc">
-      <h4 class="colorWhite">Air Traffic Control Form.</h4>
-      <hr>
+			      <style>
+			      table, th, td {
+			      border: 1px solid black;
+			      border-collapse: collapse;
+			      }
+			      th, td {
+			      padding: 5px;
+			      text-align: left;
+			      }
+			      </style>
+			      </head>
+			      <body>
 
-      <label for="frequencies"><b class="colorWhite">Frequencies:</b></label>
-      <input type="number" placeholder="Enter Frequencies" name="frequencies" required>
+			      <form action="/frequencies" method="POST" style="border:1px solid #ccc">
+			      <h3 class="colorWhite"><b>Air Traffic Control Form.</b></h3>
+			      <hr>
 
-      <button type="submit" class="submit"><b class = "colorBlack">Submit</b></button>
-      </form>
+			      <label for="frequencies"><b class="colorWhite">Frequencies:</b></label>
+			      <input type="number" placeholder="Enter Frequencies" name="frequencies" required>
 
-      <table style="width:75%">
-      <h3>Air Traffic Control Info</h3>
-      <tr>
-        <th>Runway ID</th>
-        <th>Runway Status</th>
-        <th>Flight Number</th>
-        <th>Takeoff Time</th>
-        <th>Land Time</th>
-        <th>Origin</th>
-        <th>Destination</th>
-        <th>Airport</th>
-      </tr>
-      <tr>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-      </tr>
-      <tr>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-      </tr>
-    </table>
+			      <button type="submit" class="submit"><b class = "colorBlack">Submit</b></button>
+			      </form>
+
+			      <table style="width:75%">
+			      <h3><b>Air Traffic Control Info</b></h3>
+			      <tr>
+			        <th>Runway ID</th>
+			        <th>Runway Status</th>
+			        <th>Flight Number</th>
+			        <th>Takeoff Time</th>
+			        <th>Land Time</th>
+			        <th>Origin</th>
+			        <th>Destination</th>
+			        <th>Airport</th>
+			      </tr>
+			      <tr>
+			        <td>Test</td>
+			        <td>Test</td>
+			        <td>Test</td>
+			        <td>Test</td>
+			        <td>Test</td>
+			        <td>Test</td>
+			        <td>Test</td>
+			        <td>Test</td>
+			      </tr>
+			      <tr>
+			        <td>Test</td>
+			        <td>Test</td>
+			        <td>Test</td>
+			        <td>Test</td>
+			        <td>Test</td>
+			        <td>Test</td>
+			        <td>Test</td>
+			        <td>Test</td>
+			      </tr>
+			    </table>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/browser.min.js"></script>
   <script src="assets/js/breakpoints.min.js"></script>

@@ -30,122 +30,126 @@
       <h1>Airport</h1>
     </div>
 
-    <h4>Country: United States</h4>
-    <h4>City: Baltimore</h4>
-    <h4>Airport Code: 123456789</h4><br><br>
+    <section id="main" class="wrapper">
+      <div class="inner">
+        <div class="content">
 
-    <style>
-    table, th, td {
-    border: 1px solid black;
-    border-collapse: collapse;
-    }
-    th, td {
-    padding: 5px;
-    text-align: left;
-    }
-    </style>
-    </head>
-    <body>
+          <h4>Country: United States</h4>
+          <h4>City: Baltimore</h4>
+          <h4>Airport Code: 123456789</h4><br><br>
 
-    <table style="width:75%">
-    <h3>Open Runways</h3>
-    <tr>
-      <th>Airport Code</th>
-      <th>Runway ID</th>
-      <th>Length</th>
-    </tr>
-    <tr>
-      <td>Test</td>
-      <td>Test</td>
-      <td>Test</td>
-    </tr>
-    <tr>
-      <td>Test</td>
-      <td>Test</td>
-      <td>Test</td>
-    </tr>
-    </table>
+          <style>
+          table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+          }
+          th, td {
+          padding: 5px;
+          text-align: left;
+          }
+          </style>
+          </head>
+          <body>
 
-    <table style="width:75%">
-    <h3>Closed Runways</h3>
-    <tr>
-      <th>Airport Code</th>
-      <th>Runway ID</th>
-      <th>Length</th>
-    </tr>
-    <tr>
-      <td>Test</td>
-      <td>Test</td>
-      <td>Test</td>
-    </tr>
-    <tr>
-      <td>Test</td>
-      <td>Test</td>
-      <td>Test</td>
-    </tr>
-    <form action="/runway" method="POST" style="border:1px solid #ccc">
-    </table>
+          <table style="width:75%">
+          <h3><b>Open Runways</b></h3>
+          <tr>
+            <th>Airport Code</th>
+            <th>Runway ID</th>
+            <th>Length</th>
+          </tr>
+          <tr>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          </table>
 
-    <h4 class="colorWhite">Please fill in this form to register a new runway status.</h4>
-    <hr>
+          <table style="width:75%">
+          <h3><b>Closed Runways</b></h3>
+          <tr>
+            <th>Airport Code</th>
+            <th>Runway ID</th>
+            <th>Length</th>
+          </tr>
+          <tr>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <form action="/runway" method="POST" style="border:1px solid #ccc">
+          </table>
 
-    <label for="airport_Code"><b class="colorWhite">Airport Code:</b></label>
-    <input type="text" placeholder="Enter Airport Code" name="airport_Code" required>
+          <h3 class="colorWhite"><b>Please fill in this form to register a new runway status.</b></h3>
+          <hr>
 
-    <label for="runway_ID"><b class="colorWhite">Runway ID:</b></label>
-    <input type="text" placeholder="Runway ID" name="runway_ID" required>
+          <label for="airport_Code"><b class="colorWhite">Airport Code:</b></label>
+          <input type="text" placeholder="Enter Airport Code" name="airport_Code" required>
 
-    <label for="length"><b class="colorWhite">Length:</b></label>
-    <input type="number" placeholder="Length" name="length" required>
+          <label for="runway_ID"><b class="colorWhite">Runway ID:</b></label>
+          <input type="text" placeholder="Runway ID" name="runway_ID" required>
 
-    <label for="status"><b class="colorWhite">Status:</b></label>
-    <input type="text" placeholder="Status" name="status" required>
+          <label for="length"><b class="colorWhite">Length:</b></label>
+          <input type="number" placeholder="Length" name="length" required>
 
-    <button type="submit" class="submit"><b class = "colorBlack">Submit</b></button><br><br>
+          <label for="status"><b class="colorWhite">Status:</b></label>
+          <input type="text" placeholder="Status" name="status" required>
 
-    <table style="width:75%">
-    </form>
-    <h3>Gates</h3>
-    <tr>
-      <th>Sectione</th>
-      <th>Gate ID</th>
-      <th>Company</th>
-      <th>Airport Code</th>
-    </tr>
-    <tr>
-      <td>Test</td>
-      <td>Test</td>
-      <td>Test</td>
-      <td>Test</td>
-    </tr>
-    <tr>
-      <td>Test</td>
-      <td>Test</td>
-      <td>Test</td>
-      <td>Test</td>
-    </tr>
-    </table>
+          <button type="submit" class="submit"><b class = "colorBlack">Submit</b></button><br><br>
 
-    <form action="/gate" method="POST" style="border:1px solid #ccc">
-    <h4 class="colorWhite">Please fill in this form to register a new gate.</h4>
-    <hr>
+          <table style="width:75%">
+          </form>
+          <h3><b>Gates</b></h3>
+          <tr>
+            <th>Sectione</th>
+            <th>Gate ID</th>
+            <th>Company</th>
+            <th>Airport Code</th>
+          </tr>
+          <tr>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          </table>
 
-    <label for="section"><b class="colorWhite">Section:</b></label>
-    <input type="text" placeholder="Enter Section" name="section" required>
+          <form action="/gate" method="POST" style="border:1px solid #ccc">
+          <h3 class="colorWhite"><b>Please fill in this form to register a new gate.</b></h3>
+          <hr>
 
-    <label for="gate_ID"><b class="colorWhite">Gate ID:</b></label>
-    <input type="text" placeholder="Gate ID" name="gate_ID" required>
+          <label for="section"><b class="colorWhite">Section:</b></label>
+          <input type="text" placeholder="Enter Section" name="section" required>
 
-    <label for="company"><b class="colorWhite">Company:</b></label>
-    <input type="text" placeholder="Company" name="company" required>
+          <label for="gate_ID"><b class="colorWhite">Gate ID:</b></label>
+          <input type="text" placeholder="Gate ID" name="gate_ID" required>
 
-    <label for="airport_Code"><b class="colorWhite">Airport Code:</b></label>
-    <input type="text" placeholder="Airport Code" name="airport_Code" required>
+          <label for="company"><b class="colorWhite">Company:</b></label>
+          <input type="text" placeholder="Company" name="company" required>
 
-    <button type="submit" class="submit"><b class = "colorBlack">Submit</b></button><br><br>
-    </form>
-  </div>
-  </div>
+          <label for="airport_Code"><b class="colorWhite">Airport Code:</b></label>
+          <input type="text" placeholder="Airport Code" name="airport_Code" required>
+
+          <button type="submit" class="submit"><b class = "colorBlack">Submit</b></button><br><br>
+          </form>
+        </div>
+        </div>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/browser.min.js"></script>
   <script src="assets/js/breakpoints.min.js"></script>

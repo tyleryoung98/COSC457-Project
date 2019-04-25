@@ -31,132 +31,136 @@
     <h1>Airplanes</h1>
   </div>
 
-      <style>
-      table, th, td {
-      border: 1px solid black;
-      border-collapse: collapse;
-      }
-      th, td {
-      padding: 5px;
-      text-align: left;
-      }
-      </style>
-      </head>
-      <body>
+  <section id="main" class="wrapper">
+    <div class="inner">
+      <div class="content">
 
-      <table style="width:75%">
-      <h3>List of Planes</h3>
-      <tr>
-        <th>Tail Number</th>
-        <th>Type</th>
-        <th>Flight Hours</th>
-        <th>Company</th>
-        <th>Max Takeoff Weight</th>
-        <th>Max Landing Weight</th>
-        <th>Capacity</th>
-        <th>Max Cargo Weight</th>
-      </tr>
-      <tr>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-      </tr>
-      <tr>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-      </tr>
-      </table>
-    <form action="/airplane" method="POST" style="border:1px solid #ccc">
-    <h4 class="colorWhite">Please fill in this form to register a new airplane.</h4>
-    <hr>
+          <style>
+          table, th, td {
+          border: 1px solid black;
+          border-collapse: collapse;
+          }
+          th, td {
+          padding: 5px;
+          text-align: left;
+          }
+          </style>
+          </head>
+          <body>
 
-    <label for="tail_number"><b class="colorWhite">Tail Number:</b></label>
-    <input type="text" placeholder="Enter Tail Number" name="tail_no" required>
+          <table style="width:75%">
+          <h3>List of Planes</h3>
+          <tr>
+            <th>Tail Number</th>
+            <th>Type</th>
+            <th>Flight Hours</th>
+            <th>Company</th>
+            <th>Max Takeoff Weight</th>
+            <th>Max Landing Weight</th>
+            <th>Capacity</th>
+            <th>Max Cargo Weight</th>
+          </tr>
+          <tr>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          <tr>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+            <td>Test</td>
+          </tr>
+          </table>
+        <form action="/airplane" method="POST" style="border:1px solid #ccc">
+        <h3 class="colorWhite"><b>Please fill in this form to register a new airplane.</b></h3>
+        <hr>
 
-    <label for="type"><b class="colorWhite">Type:</b></label>
-    <input type="text" placeholder="Type" name="type" required>
+        <label for="tail_number"><b class="colorWhite">Tail Number:</b></label>
+        <input type="text" placeholder="Enter Tail Number" name="tail_no" required>
 
-    <label for="flight_hours"><b class="colorWhite">Flight Hours:</b></label>
-    <input type="number" placeholder="Flight Hours" name="flight_hours" required>
+        <label for="type"><b class="colorWhite">Type:</b></label>
+        <input type="text" placeholder="Type" name="type" required>
 
-    <label for="company"><b class="colorWhite">Company:</b></label>
-    <input type="text" placeholder="Company" name="company" required><br><br>
+        <label for="flight_hours"><b class="colorWhite">Flight Hours:</b></label>
+        <input type="number" placeholder="Flight Hours" name="flight_hours" required>
 
-    <label for="maxTOWeight"><b class="colorWhite">Max Take Off Weight:</b></label>
-    <input type="number" placeholder="Max Take Off Weight" name="maxTOWeight" required>
+        <label for="company"><b class="colorWhite">Company:</b></label>
+        <input type="text" placeholder="Company" name="company" required><br><br>
 
-    <label for="maxLandWeight"><b class="colorWhite">Max Landing Weight:</b></label>
-    <input type="number" placeholder="Max Landing Weight" name="maxLandWeight" required>
+        <label for="maxTOWeight"><b class="colorWhite">Max Take Off Weight:</b></label>
+        <input type="number" placeholder="Max Take Off Weight" name="maxTOWeight" required>
 
-    <label for="capacity"><b class="colorWhite">Capacity:</b></label>
-    <input type="number" placeholder="Capacity" name="capacity" required>
+        <label for="maxLandWeight"><b class="colorWhite">Max Landing Weight:</b></label>
+        <input type="number" placeholder="Max Landing Weight" name="maxLandWeight" required>
 
-    <label for="maxCargoWeight"><b class="colorWhite">Max Cargo Weight:</b></label>
-    <input type="number" placeholder="Max Cargo Weight" name="maxCargoWeight" required>
+        <label for="capacity"><b class="colorWhite">Capacity:</b></label>
+        <input type="number" placeholder="Capacity" name="capacity" required>
 
-    <button type="submit" class="submitbtn"><b class = "colorBlack">Submit</b></button><br><br><br>
-  </form>
-    <table style="width:75%">
-    <h3>List of Pilots</h3>
-    <tr>
-      <th>Employee ID</th>
-      <th>Name</th>
-      <th>Company</th>
-      <th>Flight Hours</th>
-      <th>Position</th>
-      <th>Flight Number</th>
-    </tr>
-    <tr>
-      <td>Test</td>
-      <td>Test</td>
-      <td>Test</td>
-      <td>Test</td>
-      <td>Test</td>
-      <td>Test</td>
-    </tr>
-    <tr>
-      <td>Test</td>
-      <td>Test</td>
-      <td>Test</td>
-      <td>Test</td>
-      <td>Test</td>
-      <td>Test</td>
-    </tr>
-    </table>
-    <form action="/pilot" method="POST" style="border:1px solid #ccc">
-    <h4 class="colorWhite">Please fill in this form to register a new pilot.</h4>
-    <hr>
+        <label for="maxCargoWeight"><b class="colorWhite">Max Cargo Weight:</b></label>
+        <input type="number" placeholder="Max Cargo Weight" name="maxCargoWeight" required>
 
-    <label for="employee_ID"><b class="colorWhite">Employee_ID:</b></label>
-    <input type="number" placeholder="Enter Employee ID" name="employee_ID" required>
+        <button type="submit" class="submitbtn"><b class = "colorBlack">Submit</b></button><br><br><br>
+      </form>
+        <table style="width:75%">
+        <h3><b>List of Pilots</b></h3>
+        <tr>
+          <th>Employee ID</th>
+          <th>Name</th>
+          <th>Company</th>
+          <th>Flight Hours</th>
+          <th>Position</th>
+          <th>Flight Number</th>
+        </tr>
+        <tr>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+        </tr>
+        <tr>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+          <td>Test</td>
+        </tr>
+        </table>
+        <form action="/pilot" method="POST" style="border:1px solid #ccc">
+        <h3 class="colorWhite"><b>Please fill in this form to register a new pilot.</b></h3>
+        <hr>
 
-    <label for="name"><b class="colorWhite">Name:</b></label>
-    <input type="text" placeholder="Name" name="name" required>
+        <label for="employee_ID"><b class="colorWhite">Employee_ID:</b></label>
+        <input type="number" placeholder="Enter Employee ID" name="employee_ID" required>
 
-    <label for="company"><b class="colorWhite">Company:</b></label>
-    <input type="text" placeholder="Company" name="company" required>
+        <label for="name"><b class="colorWhite">Name:</b></label>
+        <input type="text" placeholder="Name" name="name" required>
 
-    <label for="flight_hours"><b class="colorWhite">Flight Hours:</b></label>
-    <input type="number" placeholder="Flight Hours" name="flight_hours" required>
+        <label for="company"><b class="colorWhite">Company:</b></label>
+        <input type="text" placeholder="Company" name="company" required>
 
-    <label for="position"><b class="colorWhite">Position:</b></label>
-    <input type="text" placeholder="Position" name="position" required>
+        <label for="flight_hours"><b class="colorWhite">Flight Hours:</b></label>
+        <input type="number" placeholder="Flight Hours" name="flight_hours" required>
 
-    <label for="flight_no"><b class="colorWhite">Flight Number:</b></label>
-    <input type="text" placeholder="Flight Number" name="flight_no" required>
+        <label for="position"><b class="colorWhite">Position:</b></label>
+        <input type="text" placeholder="Position" name="position" required>
 
-  <button type="submit" class="submitbtn"><b class = "colorBlack">Submit</b></button>
+        <label for="flight_no"><b class="colorWhite">Flight Number:</b></label>
+        <input type="text" placeholder="Flight Number" name="flight_no" required>
+
+        <button type="submit" class="submitbtn"><b class = "colorBlack">Submit</b></button>
 
   </div>
   </div>

@@ -30,53 +30,57 @@
       <h1>Passenger Info</h1>
     </div>
 
-      <h3 class="colorWhite">Please fill in this form to see your flight info.</h3>
-      <hr>
+    <section id="main" class="wrapper">
+      <div class="inner">
+        <div class="content">
 
-      <label for="FName"><b class="colorWhite">First Name:</b></label>
-      <input type="text" placeholder="Enter First Name" name="FName" required>
+            <h3 class="colorWhite"><b>Please fill in this form to see your flight info.</b></h3>
+            <hr>
 
-      <label for="LName"><b class="colorWhite">Last Name:</b></label>
-      <input type="text" placeholder="Enter Last Name" name="LName" required>
+            <label for="FName"><b class="colorWhite">First Name:</b></label>
+            <input type="text" placeholder="Enter First Name" name="FName" required>
 
-      <label for="CountryOfResidence"><b class="colorWhite">Country of Residence:</b></label>
-      <input type="text" placeholder="Enter Country of Residence" name="CountryOfResidence" required>
+            <label for="LName"><b class="colorWhite">Last Name:</b></label>
+            <input type="text" placeholder="Enter Last Name" name="LName" required>
 
-      <label for="Flight_number"><b class="colorWhite">Flight Number:</b></label>
-      <input type="number" placeholder="Enter Flight Number" name="Flight_number" required><br><br>
+            <label for="CountryOfResidence"><b class="colorWhite">Country of Residence:</b></label>
+            <input type="text" placeholder="Enter Country of Residence" name="CountryOfResidence" required>
 
-      <label for="BWeight"><b class="colorWhite">Baggage Weight:</b></label>
-      <input type="number" placeholder="Enter Baggage Weight" name="BWeight" required>
+            <label for="Flight_number"><b class="colorWhite">Flight Number:</b></label>
+            <input type="number" placeholder="Enter Flight Number" name="Flight_number" required><br><br>
 
-      <button type="submit" class="submit"><b class = "colorBlack">Submit</b></button><br><br>
+            <label for="BWeight"><b class="colorWhite">Baggage Weight:</b></label>
+            <input type="number" placeholder="Enter Baggage Weight" name="BWeight" required>
 
-      <style>
-      table, th, td {
-      border: 1px solid black;
-      border-collapse: collapse;
-      }
-      th, td {
-      padding: 5px;
-      text-align: left;
-      }
-      </style>
-      </head>
-      <body>
+            <button type="submit" class="submit"><b class = "colorBlack">Submit</b></button><br><br>
 
-      <table style="width:75%">
-      <h3>Your Flight</h3>
-      <tr>
-        <th>Flight Number</th>
-        <th>Tail Number</th>
-        <th>Origin</th>
-        <th>Destination</th>
-        <th>Take Off Time</th>
-        <th>Landing Time</th>
-      </tr>
-      </table>
-    </div>
-  </div>
-  </form>
+            <style>
+            table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            }
+            th, td {
+            padding: 5px;
+            text-align: left;
+            }
+            </style>
+            </head>
+            <body>
+
+            <table style="width:75%">
+            <h3><b>Your Flight</b></h3>
+            <tr>
+              <th>Flight Number</th>
+              <th>Tail Number</th>
+              <th>Origin</th>
+              <th>Destination</th>
+              <th>Take Off Time</th>
+              <th>Landing Time</th>
+            </tr>
+            </table>
+          </div>
+        </div>
+        </form>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/browser.min.js"></script>
   <script src="assets/js/breakpoints.min.js"></script>

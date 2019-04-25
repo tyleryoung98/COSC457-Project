@@ -30,80 +30,84 @@
       <h1>Flights</h1>
     </div>
 
-      <style>
-      table, th, td {
-      border: 1px solid black;
-      border-collapse: collapse;
-      }
-      th, td {
-      padding: 5px;
-      text-align: left;
-      }
-      </style>
-      </head>
-      <body>
+    <section id="main" class="wrapper">
+      <div class="inner">
+        <div class="content">
 
-      <table style="width:75%">
-      <h3>List of Flights</h3>
-      <tr>
-        <th>Flight Number</th>
-        <th>Tail Number</th>
-        <th>Origin</th>
-        <th>Destination</th>
-        <th>Take Off Time</th>
-        <th>Landing Time</th>
-        <th>Seats</th>
-      </tr>
-      <tr>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-      </tr>
-      <tr>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-        <td>Test</td>
-      </tr>
-      </table>
-      <form action="/flights" method="POST" style="border:1px solid #ccc">
-    <h4 class="colorWhite">Please fill in this form to register a new flight.</h4>
-    <hr>
+            <style>
+            table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            }
+            th, td {
+            padding: 5px;
+            text-align: left;
+            }
+            </style>
+            </head>
+            <body>
 
-    <label for="flight_number"><b class="colorWhite">Flight Number:</b></label>
-    <input type="text" placeholder="Enter Flight Number" name="flight_no" required>
+            <table style="width:75%">
+            <h3><b>List of Flights</b></h3>
+            <tr>
+              <th>Flight Number</th>
+              <th>Tail Number</th>
+              <th>Origin</th>
+              <th>Destination</th>
+              <th>Take Off Time</th>
+              <th>Landing Time</th>
+              <th>Seats</th>
+            </tr>
+            <tr>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+            </tr>
+            <tr>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+              <td>Test</td>
+            </tr>
+            </table>
+            <form action="/flights" method="POST" style="border:1px solid #ccc">
+          <h3 class="colorWhite"><b>Please fill in this form to register a new flight.</b></h3>
+          <hr>
 
-    <label for="tail_number"><b class="colorWhite">Tail Number:</b></label>
-    <input type="text" placeholder="Tail Number" name="tail_no" required>
+          <label for="flight_number"><b class="colorWhite">Flight Number:</b></label>
+          <input type="text" placeholder="Enter Flight Number" name="flight_no" required>
 
-    <label for="origin"><b class="colorWhite">Origin:</b></label>
-    <input type="text" placeholder="Origin" name="origin" required>
+          <label for="tail_number"><b class="colorWhite">Tail Number:</b></label>
+          <input type="text" placeholder="Tail Number" name="tail_no" required>
 
-    <label for="dest"><b class="colorWhite">Destination:</b></label>
-    <input type="text" placeholder="Destination" name="dest" required><br><br>
+          <label for="origin"><b class="colorWhite">Origin:</b></label>
+          <input type="text" placeholder="Origin" name="origin" required>
 
-    <label for="to_time"><b class="colorWhite">Takeoff Time:</b></label>
-    <input type="time" placeholder="Takeoff Time" name="to_time" required>
+          <label for="dest"><b class="colorWhite">Destination:</b></label>
+          <input type="text" placeholder="Destination" name="dest" required><br><br>
 
-    <label for="land_time"><b class="colorWhite">Landing Time:</b></label>
-    <input type="time" placeholder="Landing Time" name="land_time" required>
+          <label for="to_time"><b class="colorWhite">Takeoff Time:</b></label>
+          <input type="time" placeholder="Takeoff Time" name="to_time" required>
 
-    <label for="seats"><b class="colorWhite">Seats:</b></label>
-    <input type="number" placeholder="Seats" name="seats" required>
+          <label for="land_time"><b class="colorWhite">Landing Time:</b></label>
+          <input type="time" placeholder="Landing Time" name="land_time" required>
 
-    <button type="submit" class="submit"><b class = "colorBlack">Submit</b></button><br><br>
-  </form>
-    <a href="flightdata.html">Flight Data</a>
+          <label for="seats"><b class="colorWhite">Seats:</b></label>
+          <input type="number" placeholder="Seats" name="seats" required>
 
-    </div>
-  </div>
+          <button type="submit" class="submit"><b class = "colorBlack">Submit</b></button><br><br>
+        </form>
+          <a href="flightdata.html">Flight Data</a>
+
+          </div>
+        </div>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/browser.min.js"></script>
   <script src="assets/js/breakpoints.min.js"></script>
