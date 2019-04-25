@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Air Traffic Control</title>
+    <title>Passenger</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
@@ -34,25 +34,33 @@
       <div class="inner">
         <div class="content">
 
-            <h3 class="colorWhite"><b>Please fill in this form to see your flight info.</b></h3>
+            <h3 class="colorWhite"><b>Please fill in this form to see your flight info:</b></h3>
             <hr>
-
-            <label for="FName"><b class="colorWhite">First Name:</b></label>
-            <input type="text" placeholder="Enter First Name" name="FName" required>
-
-            <label for="LName"><b class="colorWhite">Last Name:</b></label>
-            <input type="text" placeholder="Enter Last Name" name="LName" required>
-
-            <label for="CountryOfResidence"><b class="colorWhite">Country of Residence:</b></label>
-            <input type="text" placeholder="Enter Country of Residence" name="CountryOfResidence" required>
-
-            <label for="Flight_number"><b class="colorWhite">Flight Number:</b></label>
-            <input type="number" placeholder="Enter Flight Number" name="Flight_number" required><br><br>
-
-            <label for="BWeight"><b class="colorWhite">Baggage Weight:</b></label>
-            <input type="number" placeholder="Enter Baggage Weight" name="BWeight" required>
-
-            <button type="submit" class="submit"><b class = "colorBlack">Submit</b></button><br><br>
+            <form method="post" action="#">
+              <div class="row gtr-uniform">
+                <div class="col-6 col-12-xsmall">
+                  <input type="text" name="FName" id="FName" value="" placeholder="Enter First Name" required/>
+                </div>
+                <div class="col-6 col-12-xsmall">
+                  <input type="text" name="LName" id="LName" value="" placeholder="Enter Last Name" required/>
+                </div>
+                <div class="col-6 col-12-xsmall">
+                  <input type="text" name="CountryOfResidence" id="CountryOfResidence" value="" placeholder="Enter Country of Residence" required/>
+                </div>
+                <div class="col-6 col-12-xsmall">
+                  <input type="number" name="Flight_number" id="Flight_number" value="" placeholder="Enter Flight Number" required/>
+                </div>
+                <div class="col-6 col-12-xsmall">
+                  <input type="number" name="BWeight" id="BWeight" value="" placeholder="Enter Baggage Weight" required/>
+                </div>
+                <div class="col-12">
+                  <ul class="actions">
+                    <li><input type="submit" value="Submit Form" class="primary" /></li>
+                    <li><input type="reset" value="Reset" /></li>
+                  </ul>
+                </div>
+              </div>
+            </form>
 
             <style>
             table, th, td {
@@ -68,7 +76,7 @@
             <body>
 
             <table style="width:75%">
-            <h3><b>Your Flight</b></h3>
+            <h3><b>Your Flight:</b></h3>
             <tr>
               <th>Flight Number</th>
               <th>Tail Number</th>
@@ -80,7 +88,7 @@
             </table>
           </div>
         </div>
-        </form>
+
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/browser.min.js"></script>
   <script src="assets/js/breakpoints.min.js"></script>

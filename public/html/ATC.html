@@ -47,15 +47,21 @@
 			      </head>
 			      <body>
 
-			      <form action="/frequencies" method="POST" style="border:1px solid #ccc">
-			      <h3 class="colorWhite"><b>Air Traffic Control Form.</b></h3>
+			      <h3 class="colorWhite"><b>Air Traffic Control Form:</b></h3>
 			      <hr>
-
-			      <label for="frequencies"><b class="colorWhite">Frequencies:</b></label>
-			      <input type="number" placeholder="Enter Frequencies" name="frequencies" required>
-
-			      <button type="submit" class="submit"><b class = "colorBlack">Submit</b></button>
-			      </form>
+						<form method="post" action="#">
+	            <div class="row gtr-uniform">
+	              <div class="col-6 col-12-xsmall">
+	                <input type="number" name="frequencies" id="frequencies" value="" placeholder="Enter Frequencies" required/>
+	              </div>
+	              <div class="col-12">
+	                <ul class="actions">
+	                  <li><input type="submit" value="Submit Form" class="primary" /></li>
+	                  <li><input type="reset" value="Reset" /></li>
+	                </ul>
+	              </div>
+	            </div>
+	          </form>
 
 			      <table style="width:75%">
 			      <h3><b>Air Traffic Control Info</b></h3>
