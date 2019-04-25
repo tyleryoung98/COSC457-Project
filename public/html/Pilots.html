@@ -20,9 +20,10 @@
       <ul class="links">
         <li><a href="admin.html">Admin</a></li>
         <li><a href="atc.html">Air Traffic Control</a></li>
+        <li><a href="company.html">Company</a></li>
+        <li><a href="flight.html">Flights</a></li>
         <li><a href="passenger.html">Passenger</a></li>
         <li><a href="pilots.html">Pilots</a></li>
-        <li><a href="flight.html">Flights</a></li>
       </ul>
     </nav>
 
@@ -45,82 +46,56 @@
             }
             </style>
             </head>
+
             <body>
-        <center>
-            <table style="width:75%">
-            <h3><b>List of Flights</b></h3>
-            <tr>
-              <th>Flight Number</th>
-              <th>Tail Number</th>
-              <th>Origin</th>
-              <th>Destination</th>
-              <th>Take Off Time</th>
-              <th>Landing Time</th>
-              <th>Seats</th>
-            </tr>
-            <tr>
-              <td>Test</td>
-              <td>Test</td>
-              <td>Test</td>
-              <td>Test</td>
-              <td>Test</td>
-              <td>Test</td>
-              <td>Test</td>
-            </tr>
-            <tr>
-              <td>Test</td>
-              <td>Test</td>
-              <td>Test</td>
-              <td>Test</td>
-              <td>Test</td>
-              <td>Test</td>
-              <td>Test</td>
-            </tr>
-            </table>
+              <center>
+              <table style="width:75%">
+              <h3><b>Flight Data</b></h3>
+              <tr>
+                <th>Flight Number</th>
+                <th>Takeoff Weight</th>
+                <th>Fuel</th>
+                <th>Callsign</th>
+              </tr>
+              <tr>
+                <td>Test</td>
+                <td>Test</td>
+                <td>Test</td>
+                <td>Test</td>
+              </tr>
+              <tr>
+                <td>Test</td>
+                <td>Test</td>
+                <td>Test</td>
+                <td>Test</td>
+              </tr>
+              </table>
+              </center>
 
-          <h3 class="colorWhite"><b>Please fill in this form to register a new flight:</b></h3>
-          <hr>
-       </center>
-          <form method="post" action="#">
-            <div class="row gtr-uniform">
-              <div class="col-6 col-12-xsmall">
-                <input type="number" name="flight_number" id="flight_number" value="" placeholder="Enter Flight Number" required/>
+            <center><h3 class="colorWhite"><b>Please fill in this form to register new flight data:</b></h3></center>
+            <hr>
+            <form method="post" action="#">
+              <div class="row gtr-uniform">
+                <div class="col-6 col-12-xsmall">
+                  <input type="number" name="flight_number" id="flight_number" value="" placeholder="Enter Flight Number" required/>
+                </div>
+                <div class="col-6 col-12-xsmall">
+                  <input type="number" name="to_weight" id="to_weight" value="" placeholder="Enter Takeoff Weight" required/>
+                </div>
+                <div class="col-6 col-12-xsmall">
+                  <input type="number" name="fuel" id="fuel" value="" placeholder="Enter Fuel Amount (lbs)" required/>
+                </div>
+                <div class="col-6 col-12-xsmall">
+                  <input type="text" name="callsign" id="callsign" value="" placeholder="Enter Callsign" required/>
+                </div>
+                <div class="col-12">
+                  <ul class="actions">
+                    <li><input type="submit" value="Submit Form" class="primary" /></li>
+                    <li><input type="reset" value="Reset" /></li>
+                  </ul>
+                </div>
               </div>
-              <div class="col-6 col-12-xsmall">
-                <input type="number" name="tail_number" id="tail_number" value="" placeholder="Enter Tail Number" required/>
-              </div>
-              <div class="col-6 col-12-xsmall">
-                <input type="text" name="origin" id="origin" value="" placeholder="Enter Origin" required/>
-              </div>
-              <div class="col-6 col-12-xsmall">
-                <input type="text" name="destination" id="destination" value="" placeholder="Enter Destination" required/>
-              </div>
-              <div class="col-6 col-12-xsmall">
-                <input type="time" name="to_time" id="to_time" value="" placeholder="Enter Takeoff Time" required/>
-              </div>
-              <div class="col-6 col-12-xsmall">
-                <input type="time" name="land_time" id="land_time" value="" placeholder="Enter Landing Time" required/>
-              </div>
-              <div class="col-6 col-12-xsmall">
-                <input type="number" name="seats" id="seats" value="" placeholder="Enter Seats" required/>
-              </div>
-              <div class="col-12">
-                <ul class="actions">
-                  <li><input type="submit" value="Submit Form" class="primary" /></li>
-                  <li><input type="reset" value="Reset" /></li>
-                </ul>
-              </div>
-            </div>
-          </form>
-
-          <br><br>
-
-          <ul class="actions">
-            <li><a href="flightdata.html" class="button primary">Flight Data</a></li>
-          </ul>
-          </div>
-        </div>
-        </form>
+            </form>
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/browser.min.js"></script>
   <script src="assets/js/breakpoints.min.js"></script>

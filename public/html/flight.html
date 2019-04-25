@@ -20,9 +20,10 @@
       <ul class="links">
         <li><a href="admin.html">Admin</a></li>
         <li><a href="atc.html">Air Traffic Control</a></li>
+        <li><a href="company.html">Company</a></li>
+        <li><a href="flight.html">Flights</a></li>
         <li><a href="passenger.html">Passenger</a></li>
         <li><a href="pilots.html">Pilots</a></li>
-        <li><a href="flight.html">Flights</a></li>
       </ul>
     </nav>
 
@@ -80,30 +81,12 @@
             </table>
             </center>
 
-          <center><h3 class="colorWhite"><b>Please fill in this form to register a new flight:</b></h3></center>
+          <center><h3 class="colorWhite"><b>Fill in this form to find flights for a specific airport:</b></h3></center>
           <hr>
           <form method="post" action="#">
             <div class="row gtr-uniform">
               <div class="col-6 col-12-xsmall">
-                <input type="number" name="flight_number" id="flight_number" value="" placeholder="Enter Flight Number" required/>
-              </div>
-              <div class="col-6 col-12-xsmall">
-                <input type="number" name="tail_number" id="tail_number" value="" placeholder="Enter Tail Number" required/>
-              </div>
-              <div class="col-6 col-12-xsmall">
-                <input type="text" name="origin" id="origin" value="" placeholder="Enter Origin" required/>
-              </div>
-              <div class="col-6 col-12-xsmall">
-                <input type="text" name="destination" id="destination" value="" placeholder="Enter Destination" required/>
-              </div>
-              <div class="col-6 col-12-xsmall">
-                <input type="time" name="to_time" id="to_time" value="" placeholder="Enter Takeoff Time" required/>
-              </div>
-              <div class="col-6 col-12-xsmall">
-                <input type="time" name="land_time" id="land_time" value="" placeholder="Enter Landing Time" required/>
-              </div>
-              <div class="col-6 col-12-xsmall">
-                <input type="number" name="seats" id="seats" value="" placeholder="Enter Seats" required/>
+                <input type="number" name="airport_Code" id="airport_Code" value="" placeholder="Enter Airport Code" required/>
               </div>
               <div class="col-12">
                 <ul class="actions">
