@@ -81,36 +81,44 @@
             <td>Test</td>
           </tr>
           </table>
-        <form action="/airplane" method="POST" style="border:1px solid #ccc">
+
         <h3 class="colorWhite"><b>Please fill in this form to register a new airplane.</b></h3>
         <hr>
+        <form method="post" action="#">
+          <div class="row gtr-uniform">
+            <div class="col-6 col-12-xsmall">
+              <input type="text" name="tail_no" id="tail_no" value="" placeholder="Enter Tail Number" />
+            </div>
+            <div class="col-6 col-12-xsmall">
+              <input type="text" name="type" id="type" value="" placeholder="Enter Type" />
+            </div>
+            <div class="col-6 col-12-xsmall">
+              <input type="number" name="flight_hours" id="flight_hours" value="" placeholder="Enter Flight Hours" />
+            </div>
+            <div class="col-6 col-12-xsmall">
+              <input type="text" name="company" id="company" value="" placeholder="Enter Company" />
+            </div>
+            <div class="col-6 col-12-xsmall">
+              <input type="number" name="maxTOWeight" id="maxTOWeight" value="" placeholder="Enter Max Takeoff Weight" />
+            </div>
+            <div class="col-6 col-12-xsmall">
+              <input type="number" name="maxLandWeight" id="maxLandWeight" value="" placeholder="Enter Max Landing Weight" />
+            </div>
+            <div class="col-6 col-12-xsmall">
+              <input type="number" name="capacity" id="capacity" value="" placeholder="Enter Capacity" />
+            </div>
+            <div class="col-6 col-12-xsmall">
+              <input type="number" name="maxCargoWeight" id="maxCargoWeight" value="" placeholder="Enter Max Cargo Weight" />
+            </div>
+            <div class="col-12">
+              <ul class="actions">
+                <li><input type="submit" value="Submit Form" class="primary" /></li>
+                <li><input type="reset" value="Reset" /></li>
+              </ul>
+            </div>
+          </div>
+        </form>
 
-        <label for="tail_number"><b class="colorWhite">Tail Number:</b></label>
-        <input type="text" placeholder="Enter Tail Number" name="tail_no" required>
-
-        <label for="type"><b class="colorWhite">Type:</b></label>
-        <input type="text" placeholder="Type" name="type" required>
-
-        <label for="flight_hours"><b class="colorWhite">Flight Hours:</b></label>
-        <input type="number" placeholder="Flight Hours" name="flight_hours" required>
-
-        <label for="company"><b class="colorWhite">Company:</b></label>
-        <input type="text" placeholder="Company" name="company" required><br><br>
-
-        <label for="maxTOWeight"><b class="colorWhite">Max Take Off Weight:</b></label>
-        <input type="number" placeholder="Max Take Off Weight" name="maxTOWeight" required>
-
-        <label for="maxLandWeight"><b class="colorWhite">Max Landing Weight:</b></label>
-        <input type="number" placeholder="Max Landing Weight" name="maxLandWeight" required>
-
-        <label for="capacity"><b class="colorWhite">Capacity:</b></label>
-        <input type="number" placeholder="Capacity" name="capacity" required>
-
-        <label for="maxCargoWeight"><b class="colorWhite">Max Cargo Weight:</b></label>
-        <input type="number" placeholder="Max Cargo Weight" name="maxCargoWeight" required>
-
-        <button type="submit" class="submitbtn"><b class = "colorBlack">Submit</b></button><br><br><br>
-      </form>
         <table style="width:75%">
         <h3><b>List of Pilots</b></h3>
         <tr>
@@ -138,9 +146,28 @@
           <td>Test</td>
         </tr>
         </table>
-        <form action="/pilot" method="POST" style="border:1px solid #ccc">
+
         <h3 class="colorWhite"><b>Please fill in this form to register a new pilot.</b></h3>
         <hr>
+        <form method="post" action="#">
+          <div class="row gtr-uniform">
+            <div class="col-6 col-12-xsmall">
+              <input type="number" name="runway_ID" id="runway_ID" value="" placeholder="Enter Runway ID" />
+            </div>
+            <div class="col-6 col-12-xsmall">
+              <input type="number" name="length" id="length" value="" placeholder="Enter Length" />
+            </div>
+            <div class="col-6 col-12-xsmall">
+              <input type="text" name="status" id="status" value="" placeholder="Enter Status" />
+            </div>
+            <div class="col-12">
+              <ul class="actions">
+                <li><input type="submit" value="Submit Form" class="primary" /></li>
+                <li><input type="reset" value="Reset" /></li>
+              </ul>
+            </div>
+          </div>
+        </form>
 
         <label for="employee_ID"><b class="colorWhite">Employee_ID:</b></label>
         <input type="number" placeholder="Enter Employee ID" name="employee_ID" required>

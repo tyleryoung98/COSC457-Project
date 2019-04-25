@@ -46,39 +46,54 @@
         </head>
         <body>
 
-        <form action="/airport" method="POST" style="border:1px solid #ccc">
-        <h3 class="colorWhite"><b>Please fill in this form to register a new airport.</b></h3>
-        <hr>
+          <h3 class="colorWhite"><b>Please fill in this form to register a new airport.</b></h3>
+          <hr>
+          <form method="post" action="#">
+            <div class="row gtr-uniform">
+              <div class="col-6 col-12-xsmall">
+                <input type="number" name="airport_Code" id="airport_Code" value="" placeholder="Enter Airport Code" />
+              </div>
+              <div class="col-6 col-12-xsmall">
+                <input type="text" name="name" id="name" value="" placeholder="Enter City" />
+              </div>
+              <div class="col-6 col-12-xsmall">
+                <input type="text" name="name" id="name" value="" placeholder="Enter Country" />
+              </div>
+              <div class="col-6 col-12-xsmall">
+                <input type="text" name="name" id="name" value="" placeholder="Enter Name" />
+              </div>
+              <div class="col-12">
+                <ul class="actions">
+                  <li><input type="submit" value="Submit Form" class="primary" /></li>
+                  <li><input type="reset" value="Reset" /></li>
+                </ul>
+              </div>
+            </div>
+          </form>
 
-        <label for="airport_Code"><b class="colorWhite">Airport Code:</b></label>
-        <input type="number" placeholder="Enter Airport Code" name="airport_Code" required><br>
-
-        <label for="city"><b class="colorWhite">City:</b></label>
-        <input type="text" placeholder="Enter City" name="city" required>
-
-        <label for="country"><b class="colorWhite">Country:</b></label>
-        <input type="text" placeholder="Enter Country" name="country" required>
-
-        <label for="name"><b class="colorWhite">Name:</b></label>
-        <input type="text" placeholder="Enter Name" name="name" required><br><br>
-
-        <button type="submit" class="submitbtn"><b class = "colorBlack">Submit</b></button><br><br><br>
-        </form>
-
-        <form action="/runway" method="POST" style="border:1px solid #ccc">
+        <br><br>
+        
         <h3 class="colorWhite"><b>Please fill in this form to register a new runway.</b></h3>
         <hr>
-
-        <label for="runway_ID"><b class="colorWhite">Runway ID:</b></label>
-        <input type="number" placeholder="Enter Runway ID" name="runway_ID" required>
-
-        <label for="length"><b class="colorWhite">Length:</b></label>
-        <input type="number" placeholder="Enter Length" name="length" required>
-
-        <label for="status"><b class="colorWhite">Status:</b></label>
-        <input type="text" placeholder="Enter Status" name="status" required>
-
-        <button type="submit" class="submitbtn"><b class = "colorBlack">Submit</b></button>
+        <form method="post" action="#">
+          <div class="row gtr-uniform">
+            <div class="col-6 col-12-xsmall">
+              <input type="number" name="runway_ID" id="runway_ID" value="" placeholder="Enter Runway ID" />
+            </div>
+            <div class="col-6 col-12-xsmall">
+              <input type="number" name="length" id="length" value="" placeholder="Enter Length" />
+            </div>
+            <div class="col-6 col-12-xsmall">
+              <input type="text" name="status" id="status" value="" placeholder="Enter Status" />
+            </div>
+            <div class="col-12">
+              <ul class="actions">
+                <li><input type="submit" value="Submit Form" class="primary" /></li>
+                <li><input type="reset" value="Reset" /></li>
+              </ul>
+            </div>
+          </div>
+        </form>
 
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/browser.min.js"></script>
