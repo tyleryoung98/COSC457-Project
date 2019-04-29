@@ -72,10 +72,10 @@ module.exports = class TableEdits{
 //-------------------------RUNWAY UPDATE/INSERT---------------------------------------
   addRunway(airport_Code,runway_ID,length,status){
     return new Promise((resolve, reject)=> {
-      var quer= "IF EXISTS (select * from RUNWAY where airport_Code="+airport_Code+
-                                                  " and runway_ID="+runway_ID+") "+
-                          "UPDATE RUNWAY SET status="+status+","+
-                " ELSE INSERT INTO RUNWAY (airport_Code,runway_ID,length,status)"
+      var quer= "IF EXISTS (select * from RUNWAY where Airport_Code="+airport_Code+
+                                                  " and Runway_ID="+runway_ID+") "+
+                          "UPDATE RUNWAY SET Open_Status="+status+","+
+                " ELSE INSERT INTO RUNWAY (Airport_Code,Runway_ID,Length,Open_Status)"
                                 +" VALUES ("+airport_Code+","+runway_ID
                                 +","+length+","+status+")";
       con.query(quer, function(err, result){
@@ -94,13 +94,13 @@ module.exports = class TableEdits{
 //-------------------------GATE UPDATE/INSERT---------------------------------------
   addGate(section,gate_ID,company,airport_Code){
     return new Promise((resolve, reject)=> {
-      var quer= "IF EXISTS (select * from GATE where airport_Code="+airport_Code+
-                                                  " and gate_ID="+gate_ID+
-                                                  " and section="+section+") "+
-                          "UPDATE GATE SET status="+status+
-                " ELSE INSERT INTO GATE (section,gate_ID,company,airport_Code)"
-                                +" VALUES ("+section+","+gate_ID
-                                +","+company+","+airport_Code+")";
+      var quer= "IF EXISTS (select * from GATE where Airport_Code="+airport_Code+
+                                                  " and Gate_ID="+gate_ID+
+                                                  " and Section="+section+") "+
+                          "UPDATE GATE SET Company="+company+
+                " ELSE INSERT INTO GATE (Airport_Code,Section,Gate_ID,Company)"
+                                +" VALUES ("+airport_Code+","+section+","+gate_ID
+                                +","+company+")";
       con.query(quer, function(err, result){
         if(err){
           console.log("Failed to insert into GATE");
