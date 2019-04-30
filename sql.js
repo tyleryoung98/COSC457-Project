@@ -40,18 +40,18 @@ module.exports = class TableEdits{
 //-------------------------AIRPLANE UPDATE/INSERT---------------------------------------
   addAirplane(tail_no,type,flight_hours,company,maxTOWeight,maxLandWeight,capacity,maxCargoWeight){
     return new Promise((resolve, reject)=> {
-      var quer= "IF EXISTS (select * from AIRPLANE where tail_no="+tail_no+") "+
-                          "UPDATE AIRPLANE SET type="+type+","+
-                          "flight_hours="+flight_hours+","+
-                          "company="+company+","+
-                          "maxTOWeight="+maxTOWeight+","+
-                          "maxLandWeight="+maxLandWeight+","+
-                          "capacity="+capacity+
-                          "maxCargoWeight="+maxCargoWeight+
-                          "where flight_no="+flight_no+
-                " ELSE INSERT INTO AIRPLANE (tail_no,type,flight_hours,company,"
-                                            +"maxTOWeight,maxLandWeight,"
-                                            +"capacity,maxCargoWeight)"
+      var quer= "IF EXISTS (select * from AIRPLANE where Tail_no="+tail_no+") "+
+                          "UPDATE AIRPLANE SET Plane_type="+type+","+
+                          "Flight_hours="+flight_hours+","+
+                          "Company="+company+","+
+                          "MaxTOWeight="+maxTOWeight+","+
+                          "MaxLandWeight="+maxLandWeight+","+
+                          "Capacity="+capacity+
+                          "MaxCargoWeight="+maxCargoWeight+
+                          "where Flight_no="+flight_no+
+                " ELSE INSERT INTO AIRPLANE (Tail_no,Plane_type,Flight_hours,Company,"
+                                            +"MaxTOWeight,MaxLandWeight,"
+                                            +"Capacity,MaxCargoWeight)"
                                     +" VALUES ("+tail_no+","+type+","+flight_hours
                                     +","+company+","+maxTOWeight
                                     +","+maxLandWeight+","+capacity

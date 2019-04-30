@@ -85,13 +85,13 @@
 
         <h3 class="colorWhite"><b>Please fill in this form to register a new airplane:</b></h3>
         <hr>
-        <form method="post" action="#">
+        <form method="post" action="/airplane">
           <div class="row gtr-uniform">
             <div class="col-6 col-12-xsmall">
-              <input type="text" name="tail_no" id="tail_no" value="" placeholder="Enter Tail Number" required/>
+              <input type="text" maxlength="8" name="tail_no" id="tail_no" value="" placeholder="Enter Tail Number" required/>
             </div>
             <div class="col-6 col-12-xsmall">
-              <input type="text" name="type" id="type" value="" placeholder="Enter Type" required/>
+              <input type="text" maxlength="8" name="type" id="type" value="" placeholder="Enter Type" required/>
             </div>
             <div class="col-6 col-12-xsmall">
               <input type="number" name="flight_hours" id="flight_hours" value="" placeholder="Enter Flight Hours" required/>
