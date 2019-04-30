@@ -8,7 +8,7 @@ module.exports = function(){
     console.log(req.body);
     const{flight_no,tail_no,origin,dest,to_time,land_time,seats} = req.body;
     dbedits.addFlight(flight_no,tail_no,origin,dest,to_time,land_time,seats).then(()=>{
-      res.redirect('/html/company.html');
+      res.redirect('public/html/company.html');
     });
   });
 
@@ -16,7 +16,7 @@ module.exports = function(){
     console.log(req.body);
     const{tail_no,type,flight_hours,company,maxTOWeight,maxLandWeight,capacity,maxCargoWeight} = req.body;
     dbedits.addAirplane(tail_no,type,flight_hours,company,maxTOWeight,maxLandWeight,capacity,maxCargoWeight).then(()=>{
-      res.redirect('/html/airplane.html');
+      res.redirect('public/html/airplane.html');
     });
   });
 
@@ -24,7 +24,7 @@ module.exports = function(){
     console.log(req.body);
     const{airport_Code,runway_ID,length,status} = req.body;
     dbedits.addFlight(airport_Code,runway_ID,length,status).then(()=>{
-      res.redirect('/html/airport.html');
+      res.redirect('public/html/airport.html');
     });
   });
 
@@ -32,7 +32,7 @@ module.exports = function(){
     console.log(req.body);
     const{section,gate_ID,company,airport_Code} = req.body;
     dbedits.addFlight(section,gate_ID,company,airport_Code).then(()=>{
-      res.redirect('/html/airport.html');
+      res.redirect('public/html/airport.html');
     });
   });
 
@@ -40,7 +40,7 @@ module.exports = function(){
     console.log(req.body);
     const{employee_ID,name,company,flight_hours,position,flight_no} = req.body;
     dbedits.addFlight(employee_ID,name,company,flight_hours,position,flight_no).then(()=>{
-      res.redirect('/html/flight.html');
+      res.redirect('public/html/flight.html');
     });
   });
 
@@ -48,7 +48,7 @@ module.exports = function(){
     console.log(req.body);
     const{} = req.body;
     dbedits.addFlight(flight_no,to_weight,fuel,callsign).then(()=>{
-      res.redirect('/html/flightData.html');
+      res.redirect('public/html/flightData.html');
     });
   });
 
