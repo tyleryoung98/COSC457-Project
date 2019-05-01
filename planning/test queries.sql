@@ -10,4 +10,5 @@ INSERT INTO AIRPLANE (Tail_no,Plane_type,Flight_hours,Company,MaxTOWeight,MaxLan
                           Capacity=280,
                           MaxCargoWeight=297300;
 
-SELECT * FROM AIRPLANE;
+SELECT * FROM AIRPLANE;*/
+select * from AIRPORT;
