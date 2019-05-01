@@ -190,11 +190,27 @@ module.exports = class TableEdits{
       var quer= "SELECT * FROM AIRPLANE;"
       con.query(quer,function(err,result){
         if(err){
-          console.log("Failed to select from FLIGHTS");
+          console.log("Failed to select from AIRPLANE");
           reject();
         }
         else{
-          console.log("Info selected from FLIGHTS");
+          console.log("Info selected from AIRPLANE");
+          resolve(result);
+        }
+      });
+    });
+  }
+
+  getAirports(){
+    return new Promise((resolve,reject) => {
+      var quer= "SELECT * FROM AIRPORT;"
+      con.query(quer,function(err,result){
+        if(err){
+          console.log("Failed to select from AIRPORT");
+          reject();
+        }
+        else{
+          console.log("Info selected from AIRPORT");
           resolve(result);
         }
       });

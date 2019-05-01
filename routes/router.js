@@ -64,4 +64,10 @@ module.exports = function(){
 			res.json(field);
 		});
 	});
+
+  router.get('/airports', function(req, res){
+		db.getAirports().then(function(field){
+			res.json(field);
+		});
+	});
 }
