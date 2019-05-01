@@ -58,4 +58,10 @@ module.exports = function(){
 			res.json(field);
 		});
 	});
+
+  router.get('/airplanes', function(req, res){
+		db.getAirplanes().then(function(field){
+			res.json(field);
+		});
+	});
 }

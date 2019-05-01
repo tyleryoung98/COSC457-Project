@@ -171,7 +171,7 @@ module.exports = class TableEdits{
 //---------------------------------FLIGHTS GET----------------------------------
   getFlights(){
     return new Promise((resolve,reject) => {
-      var quer= "SELECT * FROM FLIGHTS"
+      var quer= "SELECT * FROM FLIGHTS;"
       con.query(quer,function(err,result){
         if(err){
           console.log("Failed to select from FLIGHTS");
@@ -185,4 +185,19 @@ module.exports = class TableEdits{
     });
   }
 
+  getAirplanes(){
+    return new Promise((resolve,reject) => {
+      var quer= "SELECT * FROM AIRPLANE;"
+      con.query(quer,function(err,result){
+        if(err){
+          console.log("Failed to select from FLIGHTS");
+          reject();
+        }
+        else{
+          console.log("Info selected from FLIGHTS");
+          resolve(result);
+        }
+      });
+    });
+  }
 }
