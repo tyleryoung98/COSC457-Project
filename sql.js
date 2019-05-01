@@ -211,6 +211,7 @@ module.exports = class TableEdits{
         }
         else{
           console.log("Info selected from AIRPORT");
+          console.log(result)
           resolve(result);
         }
       });
