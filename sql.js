@@ -203,7 +203,7 @@ module.exports = class TableEdits{
 
   getAirports(){
     return new Promise((resolve,reject) => {
-      console.log("checkpoint 1");
+      console.log("checkpoint 2");
       var quer= "SELECT * FROM AIRPORT;"
       con.query(quer,function(err,result){
         if(err){

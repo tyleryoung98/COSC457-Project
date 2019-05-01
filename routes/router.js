@@ -66,6 +66,7 @@ module.exports = function(){
 	});
 
   router.get('/airports', function(req, res){
+    console.log("checkpoint 1")
 		db.getAirports().then(function(field){
 			res.json(field);
 		});
