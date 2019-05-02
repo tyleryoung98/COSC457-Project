@@ -2,13 +2,14 @@ const router = require('express').Router();
 const TableEdits = require('../sql.js');
 const db = new TableEdits();
 const path = require('path');
+const bodyParser = require('body-parser');
 
 module.exports = function(){
   //----------------------POSTS FOR UPDATE/INSERT-------------------------------
   router.post('/flights', function(req, res){
     console.log(req.body);
     const{flight_no,tail_no,origin,dest,to_time,land_time,seats} = req.body;
-    dbedits.addFlight(flight_no,tail_no,origin,dest,to_time,land_time,seats).then(()=>{
+    db.addFlight(flight_no,tail_no,origin,dest,to_time,land_time,seats).then(()=>{
       res.redirect('public/html/company.html');
     });
   });
@@ -16,7 +17,7 @@ module.exports = function(){
   router.post('/airplane', function(req, res){
     console.log(req.body);
     const{tail_no,type,flight_hours,company,maxTOWeight,maxLandWeight,capacity,maxCargoWeight} = req.body;
-    dbedits.addAirplane(tail_no,type,flight_hours,company,maxTOWeight,maxLandWeight,capacity,maxCargoWeight).then(()=>{
+    db.addAirplane(tail_no,type,flight_hours,company,maxTOWeight,maxLandWeight,capacity,maxCargoWeight).then(()=>{
       res.redirect('public/html/airplane.html');
     });
   });
@@ -24,7 +25,7 @@ module.exports = function(){
   router.post('/runway', function(req, res){
     console.log(req.body);
     const{airport_Code,runway_ID,length,status} = req.body;
-    dbedits.addFlight(airport_Code,runway_ID,length,status).then(()=>{
+    db.addFlight(airport_Code,runway_ID,length,status).then(()=>{
       res.redirect('public/html/airport.html');
     });
   });
@@ -32,7 +33,7 @@ module.exports = function(){
   router.post('/gate', function(req, res){
     console.log(req.body);
     const{section,gate_ID,company,airport_Code} = req.body;
-    dbedits.addFlight(section,gate_ID,company,airport_Code).then(()=>{
+    db.addFlight(section,gate_ID,company,airport_Code).then(()=>{
       res.redirect('public/html/airport.html');
     });
   });
@@ -40,7 +41,7 @@ module.exports = function(){
   router.post('/pilot', function(req, res){
     console.log(req.body);
     const{employee_ID,name,company,flight_hours,position,flight_no} = req.body;
-    dbedits.addFlight(employee_ID,name,company,flight_hours,position,flight_no).then(()=>{
+    db.addFlight(employee_ID,name,company,flight_hours,position,flight_no).then(()=>{
       res.redirect('public/html/flight.html');
     });
   });
@@ -48,7 +49,7 @@ module.exports = function(){
   router.post('/flightData', function(req, res){
     console.log(req.body);
     const{} = req.body;
-    dbedits.addFlight(flight_no,to_weight,fuel,callsign).then(()=>{
+    db.addFlight(flight_no,to_weight,fuel,callsign).then(()=>{
       res.redirect('public/html/flightData.html');
     });
   });
