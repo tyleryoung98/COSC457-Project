@@ -1,6 +1,7 @@
 const router = require('express').Router();
 const TableEdits = require('../sql.js');
 const dbedits = new TableEdits();
+const path = require('path');
 
 module.exports = function(){
   //----------------------POSTS FOR UPDATE/INSERT-------------------------------
