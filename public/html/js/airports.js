@@ -3,16 +3,13 @@ $(document).ready(function(){
     method: 'GET',
     success: function(result){
       let airports = $('#airports');
-      var count =0;
-      console.log("checkpoint 3");
-      for(airport of result){
+      for(i=0;i<result.length;i++){
         $("<tr>"+
-          "<td>"+ airport[count].Airport_Code+"</td>"+
-          "<td>"+ airport[count].City+"</td>"+
-          "<td>"+ airport[count].Country+"</td>"+
-          "<td>"+ airport[count].Airport_Name+"</td>"+
+          "<td>"+ result[i].Airport_Code+"</td>"+
+          "<td>"+ result[i].City+"</td>"+
+          "<td>"+ result[i].Country+"</td>"+
+          "<td>"+ result[i].Airport_Name+"</td>"+
           "</tr>").appendTo(airports);
-          count++;
       }
     }
   })

@@ -57,18 +57,21 @@ module.exports = function(){
   //------------------------GETS FOR SELECT-------------------------------------
   router.get('/flights', function(req, res){
 		db.getFlights().then(function(field){
+      console.log(JSON.stringify(field));
 			res.json(field);
 		});
 	});
 
   router.get('/airplanes', function(req, res){
 		db.getAirplanes().then(function(field){
+      console.log(JSON.stringify(field));
 			res.json(field);
 		});
 	});
 
   router.get('/airports', function(req, res){
 		db.getAirports().then(function(field){
+      console.log(JSON.stringify(field));
 			res.json(field);
 		});
 	});
