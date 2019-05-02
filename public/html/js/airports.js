@@ -12,7 +12,7 @@ $(document).ready(function(){
           "<td>"+ airport[count].Country+"</td>"+
           "<td>"+ airport[count].Airport_Name+"</td>"+
           "</tr>").appendTo(airports);
-          count+=1;
+          count++;
       }
     }
   })

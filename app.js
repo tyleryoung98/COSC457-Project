@@ -8,7 +8,7 @@ const sql = require('mysql');
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(__dirname + '/public/html'));
-app.use('/', baseRoutes);
+app.use('/', baseRoutes());
 
 
 app.listen(process.env.PORT || 3000, () => console.log('App listening'));

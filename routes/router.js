@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const TableEdits = require('../sql.js');
-const dbedits = new TableEdits();
+const db = new TableEdits();
 const path = require('path');
 
 module.exports = function(){
@@ -72,4 +72,6 @@ module.exports = function(){
 			res.json(field);
 		});
 	});
+
+  return router;
 }
