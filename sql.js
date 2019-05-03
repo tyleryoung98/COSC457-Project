@@ -291,6 +291,136 @@ module.exports = class TableEdits{
       });
     });
   }
+
+//-------------------------FREQUENCIES UPDATE/INSERT---------------------------------------
+  addFrequency(airport_Code,frequency,freqType){
+    return new Promise((resolve, reject)=> {
+      var quer= "INSERT INTO FREQUENCIES (Airport_Code,Frequency,FreqType)"
+                                +" VALUES ("+airport_Code+","+frequency+","+freqType+");";
+      con.query(quer, function(err, result){
+        if(err){
+          console.log("Failed to insert into FREQUENCIES");
+          reject();
+        }
+        else{
+          console.log("Info inserted into FREQUENCIES");
+          resolve();
+        }
+      });
+    });
+  }
+  updateFrequency(airport_Code,frequency,freqType){
+    return new Promise((resolve, reject)=> {
+      var quer= "UPDATE FREQUENCIES SET Frequency="+frequency+
+                " WHERE Airport_Code="airport_Code+
+                    "AND FreqType="+freqType+";";
+      con.query(quer, function(err, result){
+        if(err){
+          console.log("Failed to insert into FREQUENCIES");
+          reject();
+        }
+        else{
+          console.log("Info inserted into FREQUENCIES");
+          resolve();
+        }
+      });
+    });
+  }
+
+//-------------------------MAINTENANCE UPDATE/INSERT---------------------------------------
+  addMaintenance(tail_no,work_date,work_type,employee_ID){
+    return new Promise((resolve, reject)=> {
+      var quer= "INSERT INTO MAINTENANCE (Tail_no,Work_date,Work_type,Employee_ID)"
+                                +" VALUES ("+tail_no+","+work_date+","
+                                            +work_type+","+employee_ID+");";
+      con.query(quer, function(err, result){
+        if(err){
+          console.log("Failed to insert into MAINTENANCE");
+          reject();
+        }
+        else{
+          console.log("Info inserted into MAINTENANCE");
+          resolve();
+        }
+      });
+    });
+  }
+  updateMaintenance(tail_no,work_date,work_type,employee_ID){
+    return new Promise((resolve, reject)=> {
+      var quer= "UPDATE MAINTENANCE SET Work_date="+work_date+
+                " WHERE Tail_no="tail_no+
+                    "AND Employee_ID="+employee_ID+";";
+      con.query(quer, function(err, result){
+        if(err){
+          console.log("Failed to insert into MAINTENANCE");
+          reject();
+        }
+        else{
+          console.log("Info inserted into MAINTENANCE");
+          resolve();
+        }
+      });
+    });
+  }
+
+//-------------------------BUYING TICKETS---------------------------------------
+  buyTicket(flight_no,seatClass,price,ssn){
+    return new Promise((resolve, reject)=> {
+      //run query to get total tickets and then one after to insert that ticket number
+      var quer1= "SELECT COUNT(*) FROM TICKETS;"
+      con.query(quer1, function(err, result){
+        if(err){
+          console.log("Failed to get new ticket number");
+          reject();
+        }
+        else{
+          var ticket_no = result+1;
+          console.log("Got ticket number" + ticket_no);
+          var quer2= "INSERT INTO TICKETS (Ticket_no,Class,Price,Ssn)"
+                                    +" VALUES ("+ticket_no+","+seatClass+","
+                                                +price+","+ssn+");";
+          con.query(quer2, function(err, result){
+            if(err){
+              console.log("Failed to insert  into TICKETS");
+              reject();
+            }
+            else{
+              console.log("Inserted info into TICKETS");
+              addSeat(flight_no,ticket_no);
+              resolve();
+            }
+          });
+        }
+      });
+    });
+  }
+  addSeat(flight_no,ticket_no){
+    //run query to insert into seats and then one after to update seats in flights
+    var quer1= "INSERT INTO SEATS (Flight_no,Ticket_no)"+
+                    " VALUES ("+flight_no+","+ticket_no+");"
+    con.query(quer1, function(err, result){
+      if(err){
+        console.log("Failed to add to SEATS");
+      }
+      else{
+        console.log("Inserted into SEATS");
+        var quer2= "UPDATE FLIGHTS SET Seats=Seats=1"+
+                    " WHERE Flight_no="flight_no+";";
+        con.query(quer2, function(err, result){
+          if(err){
+            console.log("Failed to insert  into TICKETS");
+            reject();
+          }
+          else{
+            console.log("Inserted info into TICKETS");
+            addSeat(flight_no,ticket_no);
+            resolve();
+          }
+        });
+      }
+    });
+  }
+
 //******************************************************************************
 //                            END OF UPDATE/INSERTS
 //                            BEGINNING OF SELECTS
