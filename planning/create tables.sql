@@ -75,7 +75,9 @@ create table if not exists TICKETS(
 	Ticket_no		char(10)	not null,
     Class			varchar(15),
     Price			decimal(4,2) not null,
-    primary key (Ticket_no));
+    Ssn				char(9)		not null,
+    primary key (Ticket_no),
+    foreign key (Ssn) references PASSENGER (Ssn));
     
 create table if not exists SEATS(
 	Flight_no		varchar(10)	not null,
@@ -88,9 +90,7 @@ create table if not exists PASSENGER(
     Lname			varchar(15) not null,
     Ssn				char(9)		not null,
     CitizenOf		varchar(20)	not null,
-    Ticket_no		char(10)	not null,
-    primary key (Ssn),
-    foreign key (Ticket_no) references TICKETS (Ticket_no));
+    primary key (Ssn));
     
 create table if not exists FREQUENCIES(
 	Airport_Code	varchar(4)	not null,
