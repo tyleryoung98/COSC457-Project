@@ -162,7 +162,7 @@ module.exports = class TableEdits{
   }
 
 //-------------------------PASSENGER UPDATE/INSERT---------------------------------------
-  addMaintEmpl(ssn,fname,lname,citizenOf){
+  addPassenger(ssn,fname,lname,citizenOf){
     return new Promise((resolve, reject)=> {
       var quer= "INSERT INTO PASSENGER (Ssn,Fname,Lname,CitizenOf)"+
                 " VALUES ("+ssn+","+fname+","+lname+","+citizenOf+")"+
@@ -237,7 +237,7 @@ module.exports = class TableEdits{
       });
     });
   }
-  updateGate(section,gate_ID,company,airport_Code){
+  updateGate(section,company,airport_Code){
     return new Promise((resolve, reject)=> {
       var quer= "UPDATE GATE SET Company="+company+
                 " WHERE Section="section+

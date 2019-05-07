@@ -22,27 +22,56 @@ module.exports = function(){
     });
   });
 
-  router.post('/runway', function(req, res){
+  router.post('/insertRunway', function(req, res){
     console.log(req.body);
     const{airport_Code,runway_ID,length,status} = req.body;
-    db.addFlight(airport_Code,runway_ID,length,status).then(()=>{
+    db.addRunway(airport_Code,runway_ID,length,status).then(()=>{
+      res.redirect('public/html/admin.html');
+    });
+  });
+  router.post('/updateRunway', function(req, res){
+    console.log(req.body);
+    const{airport_Code,runway_ID,status} = req.body;
+    db.updateRunway(airport_Code,runway_ID,status).then(()=>{
+      res.redirect('public/html/atc.html');
+    });
+  });
+
+  router.post('/insertGate', function(req, res){
+    console.log(req.body);
+    const{section,gate_ID,company,airport_Code} = req.body;
+    db.addGate(section,gate_ID,company,airport_Code).then(()=>{
+      res.redirect('public/html/airport.html');
+    });
+  });
+  router.post('/updateGate', function(req, res){
+    console.log(req.body);
+    const{section,gate_ID,company,airport_Code} = req.body;
+    db.updateGate(section,company,airport_Code).then(()=>{
       res.redirect('public/html/airport.html');
     });
   });
 
-  router.post('/gate', function(req, res){
+  router.post('/insertFrequency', function(req, res){
     console.log(req.body);
-    const{section,gate_ID,company,airport_Code} = req.body;
-    db.addFlight(section,gate_ID,company,airport_Code).then(()=>{
-      res.redirect('public/html/airport.html');
+    const{frequency,freqType,airport_Code} = req.body;
+    db.addFrequency(airport_Code,frequency,freqType).then(()=>{
+      res.redirect('public/html/atc.html');
+    });
+  });
+  router.post('/updateFrequency', function(req, res){
+    console.log(req.body);
+    const{frequency,freqType,airport_Code} = req.body;
+    db.updateFrequency(airport_Code,frequency,freqType).then(()=>{
+      res.redirect('public/html/atc.html');
     });
   });
 
   router.post('/pilot', function(req, res){
     console.log(req.body);
     const{employee_ID,name,company,flight_hours,position,flight_no} = req.body;
-    db.addFlight(employee_ID,name,company,flight_hours,position,flight_no).then(()=>{
-      res.redirect('public/html/flight.html');
+    db.addPilot(employee_ID,fname,lname,company,flight_hours,position,flight_no).then(()=>{
+      res.redirect('public/html/airplane.html');
     });
   });
 

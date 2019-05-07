@@ -48,12 +48,58 @@
 			      </head>
 			      <body>
 
-			      <center><h3 class="colorWhite"><b>Air Traffic Control Form:</b></h3></center>
+			      <center><h3 class="colorWhite"><b>Add a Frequency</b></h3></center>
 			      <hr>
-						<form method="post" action="#">
+						<form method="post" action="/insertFrequency">
 	            <div class="row gtr-uniform">
 	              <div class="col-6 col-12-xsmall">
-	                <input type="number" name="frequencies" id="frequencies" value="" placeholder="Enter Frequencies" required/>
+	                <input type="number" name="frequency" id="frequency" value="" placeholder="Enter Frequency" required/>
+	              </div>
+								<div class="col-6 col-12-xsmall">
+	                <input type="text" name="freqType" id="freqType" value="" placeholder="Enter Frequency Type" required/>
+	              </div>
+								<div class="col-6 col-12-xsmall">
+	                <input type="text" name="airport_Code" id="airport_Code" value="" placeholder="Enter Airport Code" required/>
+	              </div>
+	              <div class="col-12">
+	                <ul class="actions">
+	                  <li><input type="submit" value="Submit Form" class="primary" /></li>
+	                  <li><input type="reset" value="Reset" /></li>
+	                </ul>
+	              </div>
+	            </div>
+	          </form>
+						<center><h3 class="colorWhite"><b>Update a Frequency's Channel</b></h3></center>
+						<form method="post" action="/updateFrequency">
+	            <div class="row gtr-uniform">
+	              <div class="col-6 col-12-xsmall">
+	                <input type="number" name="frequency" id="frequency" value="" placeholder="Enter Frequency" required/>
+	              </div>
+								<div class="col-6 col-12-xsmall">
+	                <input type="text" name="freqType" id="freqType" value="" placeholder="Enter Frequency Type" required/>
+	              </div>
+								<div class="col-6 col-12-xsmall">
+	                <input type="text" name="airport_Code" id="airport_Code" value="" placeholder="Enter Airport Code" required/>
+	              </div>
+	              <div class="col-12">
+	                <ul class="actions">
+	                  <li><input type="submit" value="Submit Form" class="primary" /></li>
+	                  <li><input type="reset" value="Reset" /></li>
+	                </ul>
+	              </div>
+	            </div>
+	          </form>
+						<center><h3 class="colorWhite"><b>Update a Runway's Status</b></h3></center>
+						<form method="post" action="/updateRunway">
+	            <div class="row gtr-uniform">
+	              <div class="col-6 col-12-xsmall">
+	                <input type="text" name="airport_Code" id="airport_Code" value="" placeholder="Enter Airport Code" required/>
+	              </div>
+								<div class="col-6 col-12-xsmall">
+	                <input type="text" name="runway_ID" id="runway_ID" value="" placeholder="Enter Runway ID" required/>
+	              </div>
+								<div class="col-6 col-12-xsmall">
+	                <input type="text" name="open_Status" id="open_Status" value="" placeholder="Enter Status" required/>
 	              </div>
 	              <div class="col-12">
 	                <ul class="actions">
@@ -75,26 +121,6 @@
 			        <th>Origin</th>
 			        <th>Destination</th>
 			        <th>Airport</th>
-			      </tr>
-			      <tr>
-			        <td>Test</td>
-			        <td>Test</td>
-			        <td>Test</td>
-			        <td>Test</td>
-			        <td>Test</td>
-			        <td>Test</td>
-			        <td>Test</td>
-			        <td>Test</td>
-			      </tr>
-			      <tr>
-			        <td>Test</td>
-			        <td>Test</td>
-			        <td>Test</td>
-			        <td>Test</td>
-			        <td>Test</td>
-			        <td>Test</td>
-			        <td>Test</td>
-			        <td>Test</td>
 			      </tr>
 			    </table>
 				 </center>

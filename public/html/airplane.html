@@ -61,26 +61,6 @@
             <th>Capacity</th>
             <th>Max Cargo Weight</th>
           </tr>
-          <tr>
-            <td>Test</td>
-            <td>Test</td>
-            <td>Test</td>
-            <td>Test</td>
-            <td>Test</td>
-            <td>Test</td>
-            <td>Test</td>
-            <td>Test</td>
-          </tr>
-          <tr>
-            <td>Test</td>
-            <td>Test</td>
-            <td>Test</td>
-            <td>Test</td>
-            <td>Test</td>
-            <td>Test</td>
-            <td>Test</td>
-            <td>Test</td>
-          </tr>
           </table>
 
         <h3 class="colorWhite"><b>Please fill in this form to register a new airplane:</b></h3>
@@ -152,13 +132,16 @@
 
         <h3 class="colorWhite"><b>Please fill in this form to register a new pilot:</b></h3>
         <hr>
-        <form method="post" action="#">
+        <form method="post" action="/pilot">
           <div class="row gtr-uniform">
             <div class="col-6 col-12-xsmall">
               <input type="number" name="employee_ID" id="employee_ID" value="" placeholder="Enter Employee ID" required/>
             </div>
             <div class="col-6 col-12-xsmall">
-              <input type="text" name="name" id="name" value="" placeholder="Enter Name" required/>
+              <input type="text" name="fname" id="fname" value="" placeholder="Enter First Name" required/>
+            </div>
+            <div class="col-6 col-12-xsmall">
+              <input type="text" name="lname" id="lname" value="" placeholder="Enter Last Name" required/>
             </div>
             <div class="col-6 col-12-xsmall">
               <input type="text" name="company" id="company" value="" placeholder="Enter Company" required/>
@@ -170,13 +153,7 @@
               <input type="text" name="position" id="position" value="" placeholder="Enter Position" required/>
             </div>
             <div class="col-6 col-12-xsmall">
-              <input type="text" name="flight_not" id="flight_no" value="" placeholder="Enter Flight Number" required/>
-            </div>
-            <div class="col-6 col-12-xsmall">
-              <input type="number" name="capacity" id="capacity" value="" placeholder="Enter Capacity" required/>
-            </div>
-            <div class="col-6 col-12-xsmall">
-              <input type="number" name="maxCargoWeight" id="maxCargoWeight" value="" placeholder="Enter Max Cargo Weight" required/>
+              <input type="text" name="flight_no" id="flight_no" value="" placeholder="Enter Flight Number" required/>
             </div>
             <div class="col-12">
               <ul class="actions">

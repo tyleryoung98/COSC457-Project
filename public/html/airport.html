@@ -64,16 +64,7 @@
             <th>Runway ID</th>
             <th>Length</th>
           </tr>
-          <tr>
-            <td>Test</td>
-            <td>Test</td>
-            <td>Test</td>
-          </tr>
-          <tr>
-            <td>Test</td>
-            <td>Test</td>
-            <td>Test</td>
-          </tr>
+
           </table>
 
           <table style="width:75%">
@@ -83,17 +74,8 @@
             <th>Runway ID</th>
             <th>Length</th>
           </tr>
-          <tr>
-            <td>Test</td>
-            <td>Test</td>
-            <td>Test</td>
-          </tr>
-          <tr>
-            <td>Test</td>
-            <td>Test</td>
-            <td>Test</td>
-          </tr>
-          <form action="/runway" method="POST" style="border:1px solid #ccc">
+          
+          <form action="/insertRunway" method="POST" style="border:1px solid #ccc">
           </table>
 
           <h3 class="colorWhite"><b>Please fill in this form to register a new runway status:</b></h3>
@@ -122,21 +104,10 @@
             <th>Company</th>
             <th>Airport Code</th>
           </tr>
-          <tr>
-            <td>Test</td>
-            <td>Test</td>
-            <td>Test</td>
-            <td>Test</td>
-          </tr>
-          <tr>
-            <td>Test</td>
-            <td>Test</td>
-            <td>Test</td>
-            <td>Test</td>
-          </tr>
+
           </table>
 
-          <form action="/gate" method="POST" style="border:1px solid #ccc">
+          <form action="/insertGate" method="POST" style="border:1px solid #ccc">
           <h3 class="colorWhite"><b>Please fill in this form to register a new gate:</b></h3>
           <hr>
 
@@ -145,6 +116,22 @@
 
           <label for="gate_ID"><b class="colorWhite">Gate ID:</b></label>
           <input type="text" placeholder="Gate ID" name="gate_ID" required>
+
+          <label for="company"><b class="colorWhite">Company:</b></label>
+          <input type="text" placeholder="Company" name="company" required>
+
+          <label for="airport_Code"><b class="colorWhite">Airport Code:</b></label>
+          <input type="text" placeholder="Airport Code" name="airport_Code" required>
+
+          <button type="submit" class="submit"><b class = "colorBlack">Submit</b></button><br><br>
+          </form>
+
+          <form action="/updateGate" method="POST" style="border:1px solid #ccc">
+          <h3 class="colorWhite"><b>Please fill in this form change the company of a section:</b></h3>
+          <hr>
+
+          <label for="section"><b class="colorWhite">Section:</b></label>
+          <input type="text" placeholder="Enter Section" name="section" required>
 
           <label for="company"><b class="colorWhite">Company:</b></label>
           <input type="text" placeholder="Company" name="company" required>
