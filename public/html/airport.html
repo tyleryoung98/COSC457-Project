@@ -6,7 +6,8 @@
     src="https://code.jquery.com/jquery-3.3.1.min.js"
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
-  	<script src="../js/airports.js"></script>
+  	<script src="../js/open_runways.js"></script>
+    <script src="../js/closed_runways.js"></script>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
@@ -63,7 +64,7 @@
             <th>Runway ID</th>
             <th>Length</th>
           </tr>
-
+          <ul id='open_runways' style="color: black"> </ul>
           </table>
 
           <table style="width:75%">
@@ -72,6 +73,7 @@
             <th>Airport Code</th>
             <th>Runway ID</th>
             <th>Length</th>
+            <ul id='closed_runways' style="color: black"> </ul>
           </tr>
 
           <form action="/insertRunway" method="POST" style="border:1px solid #ccc">

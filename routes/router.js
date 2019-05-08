@@ -157,6 +157,19 @@ module.exports = function(){
       //console.log(JSON.stringify(field));
 			res.json(field);
 		});
+	});//checked
+
+  router.get('/open_runways', function(req, res){
+		db.getOpenRunways().then(function(field){
+      //console.log(JSON.stringify(field));
+			res.json(field);
+		});
+	});
+  router.get('/closed_runways', function(req, res){
+		db.getClosedRunways().then(function(field){
+      //console.log(JSON.stringify(field));
+			res.json(field);
+		});
 	});
 
   return router;

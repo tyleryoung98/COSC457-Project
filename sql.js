@@ -431,7 +431,7 @@ module.exports = class TableEdits{
 
   getFlights(){
     return new Promise((resolve,reject) => {
-      var quer= "SELECT * FROM FLIGHTS;"
+      var quer= "SELECT * FROM FLIGHTS GROUP BY Origin;"
       con.query(quer,function(err,result){
         if(err){
           console.log("Failed to select from FLIGHTS");
@@ -447,7 +447,7 @@ module.exports = class TableEdits{
 
   getAirplanes(){
     return new Promise((resolve,reject) => {
-      var quer= "SELECT * FROM AIRPLANE;"
+      var quer= "SELECT * FROM AIRPLANE GROUP BY Company;"
       con.query(quer,function(err,result){
         if(err){
           console.log("Failed to select from AIRPLANE");
@@ -463,7 +463,7 @@ module.exports = class TableEdits{
 
   getAirports(){
     return new Promise((resolve,reject) => {
-      var quer= "SELECT * FROM AIRPORT;"
+      var quer= "SELECT * FROM AIRPORT;";
       con.query(quer,function(err,result){
         if(err){
           console.log("Failed to select from AIRPORT");
@@ -471,6 +471,39 @@ module.exports = class TableEdits{
         }
         else{
           console.log("Info selected from AIRPORT");
+          //console.log(result)
+          resolve(result);
+        }
+      });
+    });
+  }
+
+  getOpenRunways(){
+    return new Promise((resolve,reject) => {
+      var quer= "SELECT * FROM RUNWAY WHERE Open_Status=\"Open\" GROUP BY Airport_Code;";
+      con.query(quer,function(err,result){
+        if(err){
+          console.log("Failed to select from RUNWAY");
+          reject();
+        }
+        else{
+          console.log("Info selected from RUNWAY");
+          //console.log(result)
+          resolve(result);
+        }
+      });
+    });
+  }
+  getClosedRunways(){
+    return new Promise((resolve,reject) => {
+      var quer= "SELECT * FROM RUNWAY WHERE Open_Status=\"Closed\" GROUP BY Airport_Code;";
+      con.query(quer,function(err,result){
+        if(err){
+          console.log("Failed to select from RUNWAY");
+          reject();
+        }
+        else{
+          console.log("Info selected from RUNWAY");
           //console.log(result)
           resolve(result);
         }

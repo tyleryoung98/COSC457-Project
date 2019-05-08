@@ -2,6 +2,12 @@
 <html>
   <head>
     <title>Airplanes</title>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  	<script src="../js/airplanes.js"></script>
+    <script src="../js/pilots.js"></script>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
@@ -64,6 +70,7 @@
             <th>Capacity</th>
             <th>Max Cargo Weight</th>
           </tr>
+          <ul id='airplanes' style="color: black"> </ul>
           </table>
 
         <h3 class="colorWhite"><b>Please fill in this form to register a new airplane:</b></h3>
@@ -158,12 +165,14 @@
         <h3><b>List of Pilots</b></h3>
         <tr>
           <th>Employee ID</th>
-          <th>Name</th>
+          <th>First Name</th>
+          <th>Last Name</th>
           <th>Company</th>
           <th>Flight Hours</th>
           <th>Position</th>
           <th>Flight Number</th>
         </tr>
+        <ul id='pilots' style="color: black"> </ul>
         </table>
 
 
