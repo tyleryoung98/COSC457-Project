@@ -19,9 +19,12 @@
     <nav id="menu">
       <ul class="links">
         <li><a href="admin.html">Admin</a></li>
+        <li><a href="airplane.html">Airplane</a></li>
+        <li><a href="airport.html">Airport</a></li>
         <li><a href="atc.html">Air Traffic Control</a></li>
         <li><a href="company.html">Company</a></li>
         <li><a href="flight.html">Flights</a></li>
+        <li><a href="flightData.html">Flight Data</a></li>
         <li><a href="passenger.html">Passenger</a></li>
         <li><a href="pilots.html">Pilots</a></li>
       </ul>
@@ -84,22 +87,22 @@
               </div>
             </div>
           </form>
-          
+
           <center><h3 class="colorWhite"><b>Please fill in this form to register a new flight:</b></h3></center>
           <hr>
           <form method="post" action="/flights">
             <div class="row gtr-uniform">
               <div class="col-6 col-12-xsmall">
-                <input type="number" name="flight_number" id="flight_number" value="" placeholder="Enter Flight Number" required/>
+                <input type="text" name="flight_no" id="flight_no" value="" placeholder="Enter Flight Number" required/>
               </div>
               <div class="col-6 col-12-xsmall">
-                <input type="number" name="tail_number" id="tail_number" value="" placeholder="Enter Tail Number" required/>
+                <input type="text" name="tail_no" id="tail_no" value="" placeholder="Enter Tail Number" required/>
               </div>
               <div class="col-6 col-12-xsmall">
                 <input type="text" name="origin" id="origin" value="" placeholder="Enter Origin" required/>
               </div>
               <div class="col-6 col-12-xsmall">
-                <input type="text" name="destination" id="destination" value="" placeholder="Enter Destination" required/>
+                <input type="text" name="dest" id="dest" value="" placeholder="Enter Destination" required/>
               </div>
               <div class="col-6 col-12-xsmall">
                 <input type="time" name="to_time" id="to_time" value="" placeholder="Enter Takeoff Time" required/>
@@ -129,7 +132,10 @@
                 <input type="number" name="employee_ID" id="employee_ID" value="" placeholder="Enter Employee ID" required/>
               </div>
               <div class="col-6 col-12-xsmall">
-                <input type="text" name="name" id="name" value="" placeholder="Enter Name" required/>
+                <input type="text" name="fname" id="fname" value="" placeholder="Enter First Name" required/>
+              </div>
+              <div class="col-6 col-12-xsmall">
+                <input type="text" name="lname" id="lname" value="" placeholder="Enter Last Name" required/>
               </div>
               <div class="col-6 col-12-xsmall">
                 <input type="text" name="company" id="company" value="" placeholder="Enter Company" required/>
@@ -141,13 +147,7 @@
                 <input type="text" name="position" id="position" value="" placeholder="Enter Position" required/>
               </div>
               <div class="col-6 col-12-xsmall">
-                <input type="text" name="flight_not" id="flight_no" value="" placeholder="Enter Flight Number" required/>
-              </div>
-              <div class="col-6 col-12-xsmall">
-                <input type="number" name="capacity" id="capacity" value="" placeholder="Enter Capacity" required/>
-              </div>
-              <div class="col-6 col-12-xsmall">
-                <input type="number" name="maxCargoWeight" id="maxCargoWeight" value="" placeholder="Enter Max Cargo Weight" required/>
+                <input type="text" name="flight_no" id="flight_no" value="" placeholder="Enter Flight Number" required/>
               </div>
               <div class="col-12">
                 <ul class="actions">
@@ -168,13 +168,13 @@
                 <input type="number" name="employee_ID" id="employee_ID" value="" placeholder="Enter Employee ID" required/>
               </div>
               <div class="col-6 col-12-xsmall">
-                <input type="text" name="fname" id="fname" value="" placeholder="Enter Name" required/>
+                <input type="text" name="fname" id="fname" value="" placeholder="Enter First Name" required/>
               </div>
               <div class="col-6 col-12-xsmall">
-                <input type="text" name="lname" id="lname" value="" placeholder="Enter Name" required/>
+                <input type="text" name="lname" id="lname" value="" placeholder="Enter Last Name" required/>
               </div>
               <div class="col-6 col-12-xsmall">
-                <input type="text" name="fname" id="company" value="" placeholder="Enter Company" required/>
+                <input type="text" name="company" id="company" value="" placeholder="Enter Company" required/>
               </div>
               <div class="col-12">
                 <ul class="actions">

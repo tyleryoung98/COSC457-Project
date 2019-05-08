@@ -19,11 +19,14 @@
     <nav id="menu">
       <ul class="links">
 				<li><a href="admin.html">Admin</a></li>
-        <li><a href="atc.html">Air Traffic Control</a></li>
-        <li><a href="company.html">Company</a></li>
-        <li><a href="flight.html">Flights</a></li>
-        <li><a href="passenger.html">Passenger</a></li>
-        <li><a href="pilots.html">Pilots</a></li>
+				<li><a href="airplane.html">Airplane</a></li>
+	      <li><a href="airport.html">Airport</a></li>
+	      <li><a href="atc.html">Air Traffic Control</a></li>
+	      <li><a href="company.html">Company</a></li>
+	      <li><a href="flight.html">Flights</a></li>
+	      <li><a href="flightData.html">Flight Data</a></li>
+	      <li><a href="passenger.html">Passenger</a></li>
+	      <li><a href="pilots.html">Pilots</a></li>
       </ul>
     </nav>
 
@@ -53,7 +56,7 @@
 						<form method="post" action="/insertFrequency">
 	            <div class="row gtr-uniform">
 	              <div class="col-6 col-12-xsmall">
-	                <input type="number" name="frequency" id="frequency" value="" placeholder="Enter Frequency" required/>
+	                <input type="decimal" name="frequency" id="frequency" value="" placeholder="Enter Frequency" required/>
 	              </div>
 								<div class="col-6 col-12-xsmall">
 	                <input type="text" name="freqType" id="freqType" value="" placeholder="Enter Frequency Type" required/>
@@ -69,11 +72,12 @@
 	              </div>
 	            </div>
 	          </form>
+
 						<center><h3 class="colorWhite"><b>Update a Frequency's Channel</b></h3></center>
 						<form method="post" action="/updateFrequency">
 	            <div class="row gtr-uniform">
 	              <div class="col-6 col-12-xsmall">
-	                <input type="number" name="frequency" id="frequency" value="" placeholder="Enter Frequency" required/>
+	                <input type="decimal" name="frequency" id="frequency" value="" placeholder="Enter Frequency" required/>
 	              </div>
 								<div class="col-6 col-12-xsmall">
 	                <input type="text" name="freqType" id="freqType" value="" placeholder="Enter Frequency Type" required/>
@@ -89,6 +93,7 @@
 	              </div>
 	            </div>
 	          </form>
+
 						<center><h3 class="colorWhite"><b>Update a Runway's Status</b></h3></center>
 						<form method="post" action="/updateRunway">
 	            <div class="row gtr-uniform">
@@ -97,6 +102,9 @@
 	              </div>
 								<div class="col-6 col-12-xsmall">
 	                <input type="text" name="runway_ID" id="runway_ID" value="" placeholder="Enter Runway ID" required/>
+	              </div>
+								<div class="col-6 col-12-xsmall">
+	                <input type="number" name="length" id="length" value="" placeholder="Enter Status" required/>
 	              </div>
 								<div class="col-6 col-12-xsmall">
 	                <input type="text" name="open_Status" id="open_Status" value="" placeholder="Enter Status" required/>

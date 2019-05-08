@@ -1,12 +1,12 @@
 const sql = require("mysql");
 
-const con = sql.createConnection(process.env.JAWSDB_URL);
-/*var con = sql.createConnection({
+//const con = sql.createConnection(process.env.JAWSDB_URL);
+var con = sql.createConnection({
   host: "localhost",
   user: "root",
   password: "COSC457db",
   database: "testing"
-});*/
+});
 con.connect(function(err) {
   if(err) throw err;
   console.log('Connected to MySQL');
@@ -18,15 +18,16 @@ module.exports = class TableEdits{
     return new Promise((resolve, reject)=> {
       var quer= "INSERT INTO FLIGHTS (Flight_no,Tail_no,Origin,Dest,"
                           +"TO_Time,Land_Time,Seats)"+
-                " VALUES ("+flight_no+","+tail_no+","+origin+","+dest+","
-                        +to_time+","+land_time+","+seats+")"+
+                " VALUES (\""+flight_no+"\",\""+tail_no+"\",\""+origin+"\",\""+dest+"\",\'"
+                        +to_time+"\',\'"+land_time+"\',"+seats+")"+
                 " ON DUPLICATE KEY UPDATE"+
-                        " Tail_no="+tail_no+
-                        ", Origin="+origin+
-                        ", Dest="+dest+
-                        ", TO_Time="+to_time+
-                        ", Land_Time="+land_time+
-                        ", Seats="+seats+";";
+                        " Tail_no=\""+tail_no+
+                        "\", Origin=\""+origin+
+                        "\", Dest=\""+dest+
+                        "\", TO_Time=\'"+to_time+
+                        "\', Land_Time=\'"+land_time+
+                        "\', Seats="+seats+";";
+      console.log(quer);
       con.query(quer, function(err, result){
         if(err){
           console.log("Failed to insert into FLIGHTS");
@@ -45,13 +46,13 @@ module.exports = class TableEdits{
     return new Promise((resolve, reject)=> {
       var quer= "INSERT INTO AIRPLANE (Tail_no,Plane_type,Flight_hours,Company,"
                           +"MaxTOWeight,MaxLandWeight,Capacity,MaxCargoWeight)"+
-                " VALUES ("+tail_no+","+type+","+flight_hours+","+company+","
-                        +maxTOWeight+","+maxLandWeight+","+capacity+","+maxCargoWeight")"+
+                " VALUES (\""+tail_no+"\",\""+type+"\","+flight_hours+",\""+company+"\","
+                        +maxTOWeight+","+maxLandWeight+","+capacity+","+maxCargoWeight+")"+
                 " ON DUPLICATE KEY UPDATE"+
-                        " Plane_type="+type+
-                        ", Flight_hours="+flight_hours+
-                        ", Company="+company+
-                        ", MaxTOWeight="+maxTOWeight+
+                        " Plane_type=\""+type+
+                        "\", Flight_hours="+flight_hours+
+                        ", Company=\""+company+
+                        "\", MaxTOWeight="+maxTOWeight+
                         ", MaxLandWeight="+maxLandWeight+
                         ", Capacity="+capacity+
                         ", MaxCargoWeight="+maxCargoWeight+";";
@@ -73,11 +74,11 @@ module.exports = class TableEdits{
   addAirport(airport_Code,city,country,name){
     return new Promise((resolve, reject)=> {
       var quer= "INSERT INTO AIRPORT (Airport_Code,City,Country,Airport_Name)"+
-                " VALUES ("+airport_Code+","+city+","+country+","+name+")"+
+                " VALUES (\""+airport_Code+"\",\""+city+"\",\""+country+"\",\""+name+"\")"+
                 " ON DUPLICATE KEY UPDATE"+
-                        " City="+city+
-                        ", Country="+country+
-                        ", Airport_Name="+name+";";
+                        " City=\""+city+
+                        "\", Country=\""+country+
+                        "\", Airport_Name=\""+name+"\";";
       con.query(quer, function(err, result){
         if(err){
           console.log("Failed to insert into AIRPORT");
@@ -95,10 +96,10 @@ module.exports = class TableEdits{
   addCompany(name,location,phone){
     return new Promise((resolve, reject)=> {
       var quer= "INSERT INTO COMPANY (Company_Name,Location,Phone)"+
-                " VALUES ("+name+","+location+","+phone+")"+
+                " VALUES (\""+name+"\",\""+location+"\",\""+phone+"\")"+
                 " ON DUPLICATE KEY UPDATE"+
-                        " Location="+location+
-                        ", Phone="+phone+";";
+                        " Location=\""+location+
+                        "\", Phone=\""+phone+"\";";
       con.query(quer, function(err, result){
         if(err){
           console.log("Failed to insert into COMPANY");
@@ -117,15 +118,16 @@ module.exports = class TableEdits{
     return new Promise((resolve, reject)=> {
       var quer= "INSERT INTO PILOT (Employee_ID,Fname,Lname,Company,"
                           +"Flight_hours,Title,Flight_no)"+
-                " VALUES ("+employee_ID+","+fname+","+lname+","+company+","
-                        +flight_hours+","+position+","+flight_no+")"+
+                " VALUES (\""+employee_ID+"\",\""+fname+"\",\""+lname+"\",\""+company+"\","
+                        +flight_hours+",\""+position+"\",\""+flight_no+"\")"+
                 " ON DUPLICATE KEY UPDATE"+
-                        " Fname="+fname+
-                        ", Lname="+lname+
-                        ", Company="+company+
-                        ", Flight_hours="+flight_hours+
-                        ", Title="+position+
-                        ", Flight_no="+flight_no+";";
+                        " Fname=\""+fname+
+                        "\", Lname=\""+lname+
+                        "\", Company=\""+company+
+                        "\", Flight_hours="+flight_hours+
+                        ", Title=\""+position+
+                        "\", Flight_no=\""+flight_no+"\";";
+      console.log(quer);
       con.query(quer, function(err, result){
         if(err){
           console.log("Failed to insert into PILOT");
@@ -143,11 +145,11 @@ module.exports = class TableEdits{
   addMaintEmpl(employee_ID,fname,lname,company){
     return new Promise((resolve, reject)=> {
       var quer= "INSERT INTO MAINTENANCE_EMPLOYEE (Employee_ID,Fname,Lname,Company)"+
-                " VALUES ("+employee_ID+","+fname+","+lname+","+company+")"+
+                " VALUES (\""+employee_ID+"\",\""+fname+"\",\""+lname+"\",\""+company+"\")"+
                 " ON DUPLICATE KEY UPDATE"+
-                        " Fname="+fname+
-                        ", Lname="+lname+
-                        ", Company="+company+";";
+                        " Fname=\""+fname+
+                        "\", Lname=\""+lname+
+                        "\", Company=\""+company+"\";";
       con.query(quer, function(err, result){
         if(err){
           console.log("Failed to insert into MAINTENANCE_EMPLOYEE");
@@ -165,11 +167,11 @@ module.exports = class TableEdits{
   addPassenger(ssn,fname,lname,citizenOf){
     return new Promise((resolve, reject)=> {
       var quer= "INSERT INTO PASSENGER (Ssn,Fname,Lname,CitizenOf)"+
-                " VALUES ("+ssn+","+fname+","+lname+","+citizenOf+")"+
+                " VALUES (\""+ssn+"\",\""+fname+"\",\""+lname+"\",\""+citizenOf+"\")"+
                 " ON DUPLICATE KEY UPDATE"+
-                        " Fname="+fname+
-                        ", Lname="+lname+
-                        ", CitizenOf="+citizenOf+";";
+                        " Fname=\""+fname+
+                        "\", Lname=\""+lname+
+                        "\", CitizenOf=\""+citizenOf+"\";";
       con.query(quer, function(err, result){
         if(err){
           console.log("Failed to insert into PASSENGER");
@@ -187,8 +189,8 @@ module.exports = class TableEdits{
   addRunway(airport_Code,runway_ID,length,status){
   return new Promise((resolve, reject)=> {
     var quer= "INSERT INTO RUNWAY (Airport_Code,Runway_ID,Length,Open_Status)"
-                              +" VALUES ("+airport_Code+","+runway_ID+","+length
-                              +","+status+");";
+                              +" VALUES (\""+airport_Code+"\",\""+runway_ID+"\","+length
+                              +",\""+status+"\");";
     con.query(quer, function(err, result){
       if(err){
         console.log("Failed to insert into RUNWAY");
@@ -203,9 +205,10 @@ module.exports = class TableEdits{
 }
   updateRunway(airport_Code,runway_ID,length,status){
   return new Promise((resolve, reject)=> {
-    var quer= "UPDATE GATE SET Length="+length+","+"Open_Status="+status+
-              " WHERE Runway_ID="runway_ID+
-                      " AND Airport_Code="+airport_Code+";";
+    var quer= "UPDATE RUNWAY SET Length="+length+","+"Open_Status=\""+status+
+              "\" WHERE Runway_ID=\""+runway_ID+
+                      "\" AND Airport_Code=\""+airport_Code+"\";";
+    console.log(quer);
     con.query(quer, function(err, result){
       if(err){
         console.log("Failed to update RUNWAY");
@@ -222,9 +225,9 @@ module.exports = class TableEdits{
 //-------------------------GATE UPDATE/INSERT---------------------------------------
   addGate(section,gate_ID,company,airport_Code){
     return new Promise((resolve, reject)=> {
-      var quer= "INSERT INTO GATE (Airport_Code,Section,Gate_ID,Company)"
-                                +" VALUES ("+airport_Code+","+section+","+gate_ID
-                                +","+company+");";
+      var quer= "INSERT INTO GATES (Airport_Code,Section,Gate_ID,Company)"
+                                +" VALUES (\""+airport_Code+"\",\""+section+"\","+gate_ID
+                                +",\""+company+"\");";
       con.query(quer, function(err, result){
         if(err){
           console.log("Failed to insert into GATE");
@@ -239,9 +242,9 @@ module.exports = class TableEdits{
   }
   updateGate(section,company,airport_Code){
     return new Promise((resolve, reject)=> {
-      var quer= "UPDATE GATE SET Company="+company+
-                " WHERE Section="section+
-                        " AND Airport_Code="+airport_Code+";";
+      var quer= "UPDATE GATES SET Company=\""+company+
+                "\" WHERE Section=\""+section+
+                        "\" AND Airport_Code=\""+airport_Code+"\";";
       con.query(quer, function(err, result){
         if(err){
           console.log("Failed to update GATE");
@@ -259,8 +262,8 @@ module.exports = class TableEdits{
   addFlightData(flight_no,to_weight,fuel,callsign){
     return new Promise((resolve, reject)=> {
       var quer= "INSERT INTO FLIGHTDATA (flight_no,to_weight,fuel,callsign)"
-                                +" VALUES ("+flight_no+","+to_weight
-                                +","+fuel+","+callsign+");";
+                                +" VALUES (\""+flight_no+"\","+to_weight
+                                +","+fuel+",\""+callsign+"\");";
       con.query(quer, function(err, result){
         if(err){
           console.log("Failed to insert into FLIGHTDATA");
@@ -277,15 +280,15 @@ module.exports = class TableEdits{
     return new Promise((resolve, reject)=> {
       var quer= "UPDATE FLIGHTDATA SET TO_weight="+to_weight+","+
                                         "Fuel="+fuel+","+
-                                        "Callsign="+callsign+
-                " WHERE Flight_no="flight_no+";";
+                                        "Callsign=\""+callsign+
+                "\" WHERE Flight_no=\""+flight_no+"\";";
       con.query(quer, function(err, result){
         if(err){
-          console.log("Failed to insert into FLIGHTDATA");
+          console.log("Failed to update FLIGHTDATA");
           reject();
         }
         else{
-          console.log("Info inserted into FLIGHTDATA");
+          console.log("Info updated for FLIGHTDATA");
           resolve();
         }
       });
@@ -296,7 +299,8 @@ module.exports = class TableEdits{
   addFrequency(airport_Code,frequency,freqType){
     return new Promise((resolve, reject)=> {
       var quer= "INSERT INTO FREQUENCIES (Airport_Code,Frequency,FreqType)"
-                                +" VALUES ("+airport_Code+","+frequency+","+freqType+");";
+                                +" VALUES (\""+airport_Code+"\","+frequency+",\""+freqType+"\");";
+      console.log(quer);
       con.query(quer, function(err, result){
         if(err){
           console.log("Failed to insert into FREQUENCIES");
@@ -312,15 +316,15 @@ module.exports = class TableEdits{
   updateFrequency(airport_Code,frequency,freqType){
     return new Promise((resolve, reject)=> {
       var quer= "UPDATE FREQUENCIES SET Frequency="+frequency+
-                " WHERE Airport_Code="airport_Code+
-                    "AND FreqType="+freqType+";";
+                " WHERE Airport_Code=\""+airport_Code+
+                    "\" AND FreqType=\""+freqType+"\";";
       con.query(quer, function(err, result){
         if(err){
-          console.log("Failed to insert into FREQUENCIES");
+          console.log("Failed to update FREQUENCIES");
           reject();
         }
         else{
-          console.log("Info inserted into FREQUENCIES");
+          console.log("Info updated for FREQUENCIES");
           resolve();
         }
       });
@@ -331,8 +335,9 @@ module.exports = class TableEdits{
   addMaintenance(tail_no,work_date,work_type,employee_ID){
     return new Promise((resolve, reject)=> {
       var quer= "INSERT INTO MAINTENANCE (Tail_no,Work_date,Work_type,Employee_ID)"
-                                +" VALUES ("+tail_no+","+work_date+","
-                                            +work_type+","+employee_ID+");";
+                                +" VALUES (\""+tail_no+"\",\'"+work_date+"\',\""
+                                            +work_type+"\",\""+employee_ID+"\");";
+      console.log(quer);
       con.query(quer, function(err, result){
         if(err){
           console.log("Failed to insert into MAINTENANCE");
@@ -347,16 +352,16 @@ module.exports = class TableEdits{
   }
   updateMaintenance(tail_no,work_date,employee_ID){
     return new Promise((resolve, reject)=> {
-      var quer= "UPDATE MAINTENANCE SET Work_date="+work_date+
-                " WHERE Tail_no="tail_no+
-                    "AND Employee_ID="+employee_ID+";";
+      var quer= "UPDATE MAINTENANCE SET Work_date=\'"+work_date+
+                "\' WHERE Tail_no=\""+tail_no+
+                    "\" AND Employee_ID=\""+employee_ID+"\";";
       con.query(quer, function(err, result){
         if(err){
-          console.log("Failed to insert into MAINTENANCE");
+          console.log("Failed to update MAINTENANCE");
           reject();
         }
         else{
-          console.log("Info inserted into MAINTENANCE");
+          console.log("Info updated for MAINTENANCE");
           resolve();
         }
       });
@@ -377,9 +382,9 @@ module.exports = class TableEdits{
           var ticket_no = result+1;
           console.log("Got ticket number" + ticket_no);
           var quer2= "INSERT INTO TICKETS (Ticket_no,Class,Price,Ssn)"
-                                    +" VALUES ("+ticket_no+","+seatClass+","
-                                                +price+","+ssn+");";
-          con.query(quer2, function(err, result){
+                                    +" VALUES (\""+ticket_no+"\",\""+seatClass+"\","
+                                                +price+",\""+ssn+"\");";
+          con.query(quer2, function(err, result2){
             if(err){
               console.log("Failed to insert  into TICKETS");
               reject();
@@ -397,24 +402,22 @@ module.exports = class TableEdits{
   addSeat(flight_no,ticket_no){
     //run query to insert into seats and then one after to update seats in flights
     var quer1= "INSERT INTO SEATS (Flight_no,Ticket_no)"+
-                    " VALUES ("+flight_no+","+ticket_no+");"
+                    " VALUES (\""+flight_no+"\",\""+ticket_no+"\");"
     con.query(quer1, function(err, result){
       if(err){
         console.log("Failed to add to SEATS");
       }
       else{
         console.log("Inserted into SEATS");
-        var quer2= "UPDATE FLIGHTS SET Seats=Seats=1"+
-                    " WHERE Flight_no="flight_no+";";
-        con.query(quer2, function(err, result){
+        var quer2= "UPDATE FLIGHTS SET Seats=Seats-1"+
+                    " WHERE Flight_no=\""+flight_no+"\";";
+        con.query(quer2, function(err, result2){
           if(err){
-            console.log("Failed to insert  into TICKETS");
+            console.log("Failed to update FLIGHTS");
             reject();
           }
           else{
-            console.log("Inserted info into TICKETS");
-            addSeat(flight_no,ticket_no);
-            resolve();
+            console.log("Updated info of FLIGHTS");
           }
         });
       }
@@ -468,7 +471,7 @@ module.exports = class TableEdits{
         }
         else{
           console.log("Info selected from AIRPORT");
-          console.log(result)
+          //console.log(result)
           resolve(result);
         }
       });
