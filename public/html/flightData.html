@@ -57,27 +57,39 @@
               <th>Fuel</th>
               <th>Callsign</th>
             </tr>
-            <tr>
-              <td>Test</td>
-              <td>Test</td>
-              <td>Test</td>
-              <td>Test</td>
-            </tr>
-            <tr>
-              <td>Test</td>
-              <td>Test</td>
-              <td>Test</td>
-              <td>Test</td>
-            </tr>
             </table>
             </center>
 
           <center><h3 class="colorWhite"><b>Please fill in this form to register a new flight data:</b></h3></center>
           <hr>
-          <form method="post" action="#">
+          <form method="post" action="/insertFlightData">
             <div class="row gtr-uniform">
               <div class="col-6 col-12-xsmall">
-                <input type="number" name="flight_number" id="flight_number" value="" placeholder="Enter Flight Number" required/>
+                <input type="text" name="flight_no" id="flight_no" value="" placeholder="Enter Flight Number" required/>
+              </div>
+              <div class="col-6 col-12-xsmall">
+                <input type="number" name="to_weight" id="to_weight" value="" placeholder="Enter Takeoff Weight" required/>
+              </div>
+              <div class="col-6 col-12-xsmall">
+                <input type="number" name="fuel" id="fuel" value="" placeholder="Enter Fuel Amount (lbs)" required/>
+              </div>
+              <div class="col-6 col-12-xsmall">
+                <input type="text" name="callsign" id="callsign" value="" placeholder="Enter Callsign" required/>
+              </div>
+              <div class="col-12">
+                <ul class="actions">
+                  <li><input type="submit" value="Submit Form" class="primary" /></li>
+                  <li><input type="reset" value="Reset" /></li>
+                </ul>
+              </div>
+            </div>
+          </form>
+          
+          <center><h3 class="colorWhite"><b>Please fill in this form to update existing flight data:</b></h3></center>
+          <form method="post" action="/updateFlightData">
+            <div class="row gtr-uniform">
+              <div class="col-6 col-12-xsmall">
+                <input type="text" name="flight_no" id="flight_no" value="" placeholder="Enter Flight Number" required/>
               </div>
               <div class="col-6 col-12-xsmall">
                 <input type="number" name="to_weight" id="to_weight" value="" placeholder="Enter Takeoff Weight" required/>

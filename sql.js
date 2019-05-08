@@ -345,7 +345,7 @@ module.exports = class TableEdits{
       });
     });
   }
-  updateMaintenance(tail_no,work_date,work_type,employee_ID){
+  updateMaintenance(tail_no,work_date,employee_ID){
     return new Promise((resolve, reject)=> {
       var quer= "UPDATE MAINTENANCE SET Work_date="+work_date+
                 " WHERE Tail_no="tail_no+

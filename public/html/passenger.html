@@ -35,24 +35,21 @@
       <div class="inner">
         <div class="content">
 
-            <center><h3 class="colorWhite"><b>Please fill in this form to see your flight info:</b></h3></center>
+            <center><h3 class="colorWhite"><b>Please fill in this form to add yourself to the system:</b></h3></center>
             <hr>
-            <form method="post" action="#">
+            <form method="post" action="/passenger">
               <div class="row gtr-uniform">
                 <div class="col-6 col-12-xsmall">
-                  <input type="text" name="FName" id="FName" value="" placeholder="Enter First Name" required/>
+                  <input type="text" name="ssn" id="ssn" value="" placeholder="Enter SSN" required/>
                 </div>
                 <div class="col-6 col-12-xsmall">
-                  <input type="text" name="LName" id="LName" value="" placeholder="Enter Last Name" required/>
+                  <input type="text" name="fname" id="fname" value="" placeholder="Enter First Name" required/>
                 </div>
                 <div class="col-6 col-12-xsmall">
-                  <input type="text" name="CountryOfResidence" id="CountryOfResidence" value="" placeholder="Enter Country of Residence" required/>
+                  <input type="text" name="lname" id="lname" value="" placeholder="Enter Last Name" required/>
                 </div>
                 <div class="col-6 col-12-xsmall">
-                  <input type="number" name="Flight_number" id="Flight_number" value="" placeholder="Enter Flight Number" required/>
-                </div>
-                <div class="col-6 col-12-xsmall">
-                  <input type="number" name="BWeight" id="BWeight" value="" placeholder="Enter Baggage Weight" required/>
+                  <input type="text" name="citizenOf" id="citizenOf" value="" placeholder="Enter Country of Residence" required/>
                 </div>
                 <div class="col-12">
                   <ul class="actions">

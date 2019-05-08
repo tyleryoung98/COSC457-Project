@@ -1,17 +1,17 @@
 $(document).ready(function(){
   $.ajax('/flights', {
     method: 'GET',
-    success: function(field){
+    success: function(result){
       let flights = $('#flights');
-      for(flight of field){
+      for(i=0;i<result.length;i++){{
         $("<tr>"+
-          "<td>"+ flight.flight_no+"</td>"+
-          "<td>"+ flight.tail_no+"</td>"+
-          "<td>"+ flight.origin+"</td>"+
-          "<td>"+ flight.dest+"</td>"+
-          "<td>"+ flight.to_time+"</td>"+
-          "<td>"+ flight.land_time+"</td>"+
-          "<td>"+ flight.seats+"</td>"+
+          "<td>"+ result[i].flight_no+"</td>"+
+          "<td>"+ result[i].tail_no+"</td>"+
+          "<td>"+ result[i].origin+"</td>"+
+          "<td>"+ result[i].dest+"</td>"+
+          "<td>"+ result[i].to_time+"</td>"+
+          "<td>"+ result[i].land_time+"</td>"+
+          "<td>"+ result[i].seats+"</td>"+
           "</tr>").appendTo(flights);
       }
     }

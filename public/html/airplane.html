@@ -102,6 +102,55 @@
 
         <br><br>
 
+        <h3 class="colorWhite"><b>Please fill in this form to add new maintenance work:</b></h3>
+        <hr>
+        <form method="post" action="/insertMaintWork">
+          <div class="row gtr-uniform">
+            <div class="col-6 col-12-xsmall">
+              <input type="text" maxlength="8" name="tail_no" id="tail_no" value="" placeholder="Enter Tail Number" required/>
+            </div>
+            <div class="col-6 col-12-xsmall">
+              <input type="date" maxlength="8" name="work_date" id="work_date" value="" placeholder="Enter Work Date" required/>
+            </div>
+            <div class="col-6 col-12-xsmall">
+              <input type="text" name="work_type" id="work_type" value="" placeholder="Enter Type of Work" required/>
+            </div>
+            <div class="col-6 col-12-xsmall">
+              <input type="text" name="employee_ID" id="employee_ID" value="" placeholder="Enter Employee ID" required/>
+            </div>
+            <div class="col-12">
+              <ul class="actions">
+                <li><input type="submit" value="Submit Form" class="primary" /></li>
+                <li><input type="reset" value="Reset" /></li>
+              </ul>
+            </div>
+          </div>
+        </form>
+
+        <br><br>
+
+        <h3 class="colorWhite"><b>Please fill in this form to change maintenance work date:</b></h3>
+        <hr>
+        <form method="post" action="/updateMaintWork">
+          <div class="row gtr-uniform">
+            <div class="col-6 col-12-xsmall">
+              <input type="text" maxlength="8" name="tail_no" id="tail_no" value="" placeholder="Enter Tail Number" required/>
+            </div>
+            <div class="col-6 col-12-xsmall">
+              <input type="date" maxlength="8" name="work_date" id="work_date" value="" placeholder="Enter Work Date" required/>
+            </div>
+            <div class="col-6 col-12-xsmall">
+              <input type="text" name="employee_ID" id="employee_ID" value="" placeholder="Enter Employee ID" required/>
+            </div>
+            <div class="col-12">
+              <ul class="actions">
+                <li><input type="submit" value="Submit Form" class="primary" /></li>
+                <li><input type="reset" value="Reset" /></li>
+              </ul>
+            </div>
+          </div>
+        </form>
+
         <table style="width:75%">
         <h3><b>List of Pilots</b></h3>
         <tr>
@@ -112,57 +161,8 @@
           <th>Position</th>
           <th>Flight Number</th>
         </tr>
-        <tr>
-          <td>Test</td>
-          <td>Test</td>
-          <td>Test</td>
-          <td>Test</td>
-          <td>Test</td>
-          <td>Test</td>
-        </tr>
-        <tr>
-          <td>Test</td>
-          <td>Test</td>
-          <td>Test</td>
-          <td>Test</td>
-          <td>Test</td>
-          <td>Test</td>
-        </tr>
         </table>
 
-        <h3 class="colorWhite"><b>Please fill in this form to register a new pilot:</b></h3>
-        <hr>
-        <form method="post" action="/pilot">
-          <div class="row gtr-uniform">
-            <div class="col-6 col-12-xsmall">
-              <input type="number" name="employee_ID" id="employee_ID" value="" placeholder="Enter Employee ID" required/>
-            </div>
-            <div class="col-6 col-12-xsmall">
-              <input type="text" name="fname" id="fname" value="" placeholder="Enter First Name" required/>
-            </div>
-            <div class="col-6 col-12-xsmall">
-              <input type="text" name="lname" id="lname" value="" placeholder="Enter Last Name" required/>
-            </div>
-            <div class="col-6 col-12-xsmall">
-              <input type="text" name="company" id="company" value="" placeholder="Enter Company" required/>
-            </div>
-            <div class="col-6 col-12-xsmall">
-              <input type="number" name="flight_hours" id="flight_hours" value="" placeholder="Enter Flight Hours" required/>
-            </div>
-            <div class="col-6 col-12-xsmall">
-              <input type="text" name="position" id="position" value="" placeholder="Enter Position" required/>
-            </div>
-            <div class="col-6 col-12-xsmall">
-              <input type="text" name="flight_no" id="flight_no" value="" placeholder="Enter Flight Number" required/>
-            </div>
-            <div class="col-12">
-              <ul class="actions">
-                <li><input type="submit" value="Submit Form" class="primary" /></li>
-                <li><input type="reset" value="Reset" /></li>
-              </ul>
-            </div>
-          </div>
-        </form>
 
   </div>
   </div>
