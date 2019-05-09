@@ -542,7 +542,7 @@ module.exports = class TableEdits{
 
   getAirplanes(){
     return new Promise((resolve,reject) => {
-      var quer= "SELECT * FROM AIRPLANE GROUP BY Company;";
+      var quer= "SELECT * FROM AIRPLANE;";
       con.query(quer,function(err,result){
         if(err){
           console.log("Failed to select from AIRPLANE");
