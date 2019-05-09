@@ -2,6 +2,11 @@
 <html>
   <head>
     <title>Flight Data</title>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+  	<script src="../js/flights.js"></script>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="description" content="" />
@@ -51,17 +56,37 @@
             </head>
             <body>
 
-            <center>
-            <table style="width:75%">
-            <h3><b>List of Flights</b></h3>
-            <tr>
-              <th>Flight Number</th>
-              <th>Takeoff Weight</th>
-              <th>Fuel</th>
-              <th>Callsign</th>
-            </tr>
-            </table>
-            </center>
+              <center>
+              <table style="width:75%">
+              <h3><b>List of Flights</b></h3>
+              <tr>
+                <th>Flight Number</th>
+                <th>Tail Number</th>
+                <th>Origin</th>
+                <th>Destination</th>
+                <th>Take Off Time</th>
+                <th>Landing Time</th>
+                <th>Seats</th>
+              </tr>
+              <ul id='flights' style="color: black"> </ul>
+              </table>
+              </center>
+
+            <center><h3 class="colorWhite"><b>Get Flight Specific Data:</b></h3></center>
+            <hr>
+            <form method="post" action="/getFlightData">
+              <div class="row gtr-uniform">
+                <div class="col-6 col-12-xsmall">
+                  <input type="text" name="flight_no" id="flight_no" value="" placeholder="Enter Flight Number" maxlength="8" required/>
+                </div>
+                <div class="col-12">
+                  <ul class="actions">
+                    <li><input type="submit" value="Submit Form" class="primary" /></li>
+                    <li><input type="reset" value="Reset" /></li>
+                  </ul>
+                </div>
+              </div>
+            </form>
 
           <center><h3 class="colorWhite"><b>Please fill in this form to register a new flight data:</b></h3></center>
           <hr>

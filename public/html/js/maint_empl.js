@@ -8,6 +8,7 @@ $(document).ready(function(){
           "<td>"+ result[i].Employee_ID+"</td>"+
           "<td>"+ result[i].Fname+"</td>"+
           "<td>"+ result[i].Lname+"</td>"+
+          "<td>"+ result[i].Company+"</td>"+
           "</tr>").appendTo(employee);
       }
     }

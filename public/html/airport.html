@@ -57,24 +57,37 @@
           </head>
           <body>
 
-          <table style="width:75%">
-          <h3><b>Open Runways</b></h3>
-          <tr>
-            <th>Airport Code</th>
-            <th>Runway ID</th>
-            <th>Length</th>
-          </tr>
-          <ul id='open_runways' style="color: black"> </ul>
-          </table>
+            <center><h3 class="colorWhite"><b>Get Airport Runway Data:</b></h3></center>
+            <hr>
+            <form method="post" action="/specificRunway">
+              <div class="row gtr-uniform">
+                <div class="col-6 col-12-xsmall">
+                  <input type="text" name="airport_Code" id="airport_Code" value="" placeholder="Enter Airport Code" maxlength="4" required/>
+                </div>
+                <div class="col-12">
+                  <ul class="actions">
+                    <li><input type="submit" value="Submit Form" class="primary" /></li>
+                    <li><input type="reset" value="Reset" /></li>
+                  </ul>
+                </div>
+              </div>
+            </form>
 
-          <table style="width:75%">
-          <h3><b>Closed Runways</b></h3>
-          <tr>
-            <th>Airport Code</th>
-            <th>Runway ID</th>
-            <th>Length</th>
-            <ul id='closed_runways' style="color: black"> </ul>
-          </tr>
+            <center><h3 class="colorWhite"><b>Get Airport Gate Data:</b></h3></center>
+            <hr>
+            <form method="post" action="/specificGates">
+              <div class="row gtr-uniform">
+                <div class="col-6 col-12-xsmall">
+                  <input type="text" name="airport_Code" id="airport_Code" value="" placeholder="Enter Airport Code" maxlength="4" required/>
+                </div>
+                <div class="col-12">
+                  <ul class="actions">
+                    <li><input type="submit" value="Submit Form" class="primary" /></li>
+                    <li><input type="reset" value="Reset" /></li>
+                  </ul>
+                </div>
+              </div>
+            </form>
 
           <form action="/insertRunway" method="POST" style="border:1px solid #ccc">
           </table>
@@ -92,21 +105,15 @@
           <input type="number" placeholder="Length" name="length" required>
 
           <label for="status"><b class="colorWhite">Status:</b></label>
-          <input type="text" placeholder="Status" name="status" maxlength="6" required>
+          <select name="open_Status">
+            <option value="Open">Open</option>
+            <option value="Closed">Closed</option>
+          </select>
 
           <button type="submit" class="submit"><b class = "colorBlack">Submit</b></button><br><br>
 
-          <table style="width:75%">
           </form>
-          <h3><b>Gates</b></h3>
-          <tr>
-            <th>Sectione</th>
-            <th>Gate ID</th>
-            <th>Company</th>
-            <th>Airport Code</th>
-          </tr>
 
-          </table>
 
           <form action="/insertGate" method="POST" style="border:1px solid #ccc">
           <h3 class="colorWhite"><b>Please fill in this form to register a new gate:</b></h3>

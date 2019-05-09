@@ -51,6 +51,52 @@
 			      </head>
 			      <body>
 
+							<center><h3 class="colorWhite"><b>Get An Airports Frequencies:</b></h3></center>
+			        <hr>
+			        <form method="post" action="/airportFreqs">
+			          <div class="row gtr-uniform">
+			            <div class="col-6 col-12-xsmall">
+			              <input type="text" name="airport_Code" id="airport_Code" value="" placeholder="Enter Airport Code" maxlength="4" required/>
+			            </div>
+			            <div class="col-12">
+			              <ul class="actions">
+			                <li><input type="submit" value="Submit Form" class="primary" /></li>
+			                <li><input type="reset" value="Reset" /></li>
+			              </ul>
+			            </div>
+			          </div>
+			        </form>
+							<center><h3 class="colorWhite"><b>Get Incoming Flights:</b></h3></center>
+			        <hr>
+			        <form method="post" action="/incoming">
+			          <div class="row gtr-uniform">
+			            <div class="col-6 col-12-xsmall">
+			              <input type="text" name="airport_Code" id="airport_Code" value="" placeholder="Enter Airport Code" maxlength="4" required/>
+			            </div>
+			            <div class="col-12">
+			              <ul class="actions">
+			                <li><input type="submit" value="Submit Form" class="primary" /></li>
+			                <li><input type="reset" value="Reset" /></li>
+			              </ul>
+			            </div>
+			          </div>
+			        </form>
+							<center><h3 class="colorWhite"><b>Get Outgoing Flights:</b></h3></center>
+			        <hr>
+			        <form method="post" action="/outgoing">
+			          <div class="row gtr-uniform">
+			            <div class="col-6 col-12-xsmall">
+			              <input type="text" name="airport_Code" id="airport_Code" value="" placeholder="Enter Airport Code" maxlength="4" required/>
+			            </div>
+			            <div class="col-12">
+			              <ul class="actions">
+			                <li><input type="submit" value="Submit Form" class="primary" /></li>
+			                <li><input type="reset" value="Reset" /></li>
+			              </ul>
+			            </div>
+			          </div>
+			        </form>
+
 			      <center><h3 class="colorWhite"><b>Add a Frequency</b></h3></center>
 			      <hr>
 						<form method="post" action="/insertFrequency">
@@ -59,7 +105,13 @@
 	                <input type="decimal" name="frequency" id="frequency" value="" placeholder="Enter Frequency" maxlength="5" required/>
 	              </div>
 								<div class="col-6 col-12-xsmall">
-	                <input type="text" name="freqType" id="freqType" value="" placeholder="Enter Frequency Type" maxlength="15" required/>
+									<select name="freqType">
+				            <option value="Approach">Approach</option>
+				            <option value="Departure">Departure</option>
+										<option value="Ground">Ground</option>
+				            <option value="Emergency">Emergency</option>
+										<option value="Tower">Tower</option>
+				          </select>
 	              </div>
 								<div class="col-6 col-12-xsmall">
 	                <input type="text" name="airport_Code" id="airport_Code" value="" placeholder="Enter Airport Code" maxlength="4" required/>
@@ -80,7 +132,13 @@
 	                <input type="decimal" name="frequency" id="frequency" value="" placeholder="Enter Frequency" maxlength="5" required/>
 	              </div>
 								<div class="col-6 col-12-xsmall">
-	                <input type="text" name="freqType" id="freqType" value="" placeholder="Enter Frequency Type" maxlength="15" required/>
+									<select name="freqType">
+				            <option value="Approach">Approach</option>
+				            <option value="Departure">Departure</option>
+										<option value="Ground">Ground</option>
+				            <option value="Emergency">Emergency</option>
+										<option value="Tower">Tower</option>
+				          </select>
 	              </div>
 								<div class="col-6 col-12-xsmall">
 	                <input type="text" name="airport_Code" id="airport_Code" value="" placeholder="Enter Airport Code" maxlength="4" required/>
@@ -107,7 +165,10 @@
 	                <input type="number" name="length" id="length" value="" placeholder="Enter Length" required/>
 	              </div>
 								<div class="col-6 col-12-xsmall">
-	                <input type="text" name="open_Status" id="open_Status" value="" placeholder="Enter Status" maxlength="6" required/>
+									<select name="open_Status">
+				            <option value="Open">Open</option>
+				            <option value="Closed">Closed</option>
+				          </select>
 	              </div>
 	              <div class="col-12">
 	                <ul class="actions">
@@ -117,21 +178,7 @@
 	              </div>
 	            </div>
 	          </form>
-					 <center>
-			      <table style="width:75%">
-			      <h3><b>Air Traffic Control Info</b></h3>
-			      <tr>
-			        <th>Runway ID</th>
-			        <th>Runway Status</th>
-			        <th>Flight Number</th>
-			        <th>Takeoff Time</th>
-			        <th>Land Time</th>
-			        <th>Origin</th>
-			        <th>Destination</th>
-			        <th>Airport</th>
-			      </tr>
-			    </table>
-				 </center>
+
   <script src="assets/js/jquery.min.js"></script>
   <script src="assets/js/browser.min.js"></script>
   <script src="assets/js/breakpoints.min.js"></script>

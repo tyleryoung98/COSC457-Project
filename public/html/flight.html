@@ -7,6 +7,7 @@
     integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
     crossorigin="anonymous"></script>
   	<script src="../js/flights.js"></script>
+    <script src="../js/flights_options.js"></script>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
@@ -74,10 +75,36 @@
 
           <center><h3 class="colorWhite"><b>Fill in this form to find flights for a specific airport:</b></h3></center>
           <hr>
-          <form method="post" action="/specificAirport">
+          <form method="post" action="/specificAirportFlights">
             <div class="row gtr-uniform">
               <div class="col-6 col-12-xsmall">
                 <input type="text" name="airport_Code" id="airport_Code" value="" placeholder="Enter Airport Code" maxlength="4" required/>
+              </div>
+              <div class="col-12">
+                <ul class="actions">
+                  <li><input type="submit" value="Submit Form" class="primary" /></li>
+                  <li><input type="reset" value="Reset" /></li>
+                </ul>
+              </div>
+            </div>
+          </form>
+
+          <center><h3 class="colorWhite"><b>Fill in this form to buy a ticket:</b></h3></center>
+          <hr>
+          <form method="post" action="/buyTicket">
+            <div class="row gtr-uniform">
+              <div class="col-6 col-12-xsmall">
+              <input type="text" name="flight_no" id="flight_no" value="" placeholder="Enter Flight Number" maxlength="8" required/>
+              </div>
+              <div class="col-6 col-12-xsmall">
+                <select name="seatClass">
+                  <option value="First">First</option>
+                  <option value="Economy">Economy</option>
+                  <option value="Business">Business</option>
+                </select>
+              </div>
+              <div class="col-6 col-12-xsmall">
+                <input type="number" name="ssn" id="ssn" value="" placeholder="Enter SSN" min="111111111" max="999999999" required/>
               </div>
               <div class="col-12">
                 <ul class="actions">

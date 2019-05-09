@@ -93,7 +93,21 @@
             <ul id='pilots' style="color: black"> </ul>
             </table>
         </center>
-
+        <center><h3 class="colorWhite"><b>Get Aircraft Owned by a Company:</b></h3></center>
+        <hr>
+        <form method="post" action="/companyAircraft">
+          <div class="row gtr-uniform">
+            <div class="col-6 col-12-xsmall">
+              <input type="text" name="company" id="company" value="" placeholder="Enter Company Name" maxlength="25" required/>
+            </div>
+            <div class="col-12">
+              <ul class="actions">
+                <li><input type="submit" value="Submit Form" class="primary" /></li>
+                <li><input type="reset" value="Reset" /></li>
+              </ul>
+            </div>
+          </div>
+        </form>
 
         <br><br>
 
@@ -109,7 +123,7 @@
                 <input type="text" name="location" id="location" value="" placeholder="Enter Location" maxlength="30" required/>
               </div>
               <div class="col-6 col-12-xsmall">
-                <input type="text" name="phone" id="phone" value="" placeholder="Enter Phone Number" maxlength="10" required/>
+                <input type="number" name="phone" id="phone" value="" placeholder="Enter Phone Number" min="1111111111" max="9999999999" required/>
               </div>
               <div class="col-12">
                 <ul class="actions">
@@ -160,9 +174,7 @@
           <hr>
           <form method="post" action="/pilot">
             <div class="row gtr-uniform">
-              <div class="col-6 col-12-xsmall">
-                <input type="number" name="employee_ID" id="employee_ID" value="" placeholder="Enter Employee ID" maxlength="10" required/>
-              </div>
+
               <div class="col-6 col-12-xsmall">
                 <input type="text" name="fname" id="fname" value="" placeholder="Enter First Name" maxlength="15" required/>
               </div>
@@ -176,7 +188,10 @@
                 <input type="number" name="flight_hours" id="flight_hours" value="" placeholder="Enter Flight Hours" required/>
               </div>
               <div class="col-6 col-12-xsmall">
-                <input type="text" name="position" id="position" value="" placeholder="Enter Position" maxlength="15" required/>
+                <select name="position">
+                  <option value="Captain">Captain</option>
+                  <option value="First Officer">First Officer</option>
+                </select>
               </div>
               <div class="col-6 col-12-xsmall">
                 <input type="text" name="flight_no" id="flight_no" value="" placeholder="Enter Flight Number" maxlength="8" required/>
@@ -196,9 +211,7 @@
           <hr>
           <form method="post" action="/maintEmpl">
             <div class="row gtr-uniform">
-              <div class="col-6 col-12-xsmall">
-                <input type="number" name="employee_ID" id="employee_ID" value="" placeholder="Enter Employee ID" maxlength="10" required/>
-              </div>
+
               <div class="col-6 col-12-xsmall">
                 <input type="text" name="fname" id="fname" value="" placeholder="Enter First Name" maxlength="15" required/>
               </div>

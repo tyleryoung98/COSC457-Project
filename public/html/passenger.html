@@ -43,7 +43,7 @@
             <form method="post" action="/passenger">
               <div class="row gtr-uniform">
                 <div class="col-6 col-12-xsmall">
-                  <input type="text" name="ssn" id="ssn" value="" placeholder="Enter SSN" maxlength="9" required/>
+                  <input type="number" name="ssn" id="ssn" placeholder="Enter SSN" min="111111111" max="999999999" required/>
                 </div>
                 <div class="col-6 col-12-xsmall">
                   <input type="text" name="fname" id="fname" value="" placeholder="Enter First Name" maxlength="15" required/>
@@ -76,19 +76,50 @@
             </head>
             <body>
 
-            <center>
-            <table style="width:75%">
-            <h3><b>Your Flight:</b></h3>
-            <tr>
-              <th>Flight Number</th>
-              <th>Tail Number</th>
-              <th>Origin</th>
-              <th>Destination</th>
-              <th>Take Off Time</th>
-              <th>Landing Time</th>
-            </tr>
-            </table>
-            </center>
+            <form action="/addBaggage" method="POST" style="border:1px solid #ccc">
+            <h3 class="colorWhite"><b>Please fill in this form to register a new bag:</b></h3>
+            <hr>
+
+            <label for="flight_no"><b class="colorWhite">Flight Number:</b></label>
+            <input type="text" placeholder="Flight Number" name="flight_no" required>
+
+            <label for="ticket_no"><b class="colorWhite">Ticket Number:</b></label>
+            <input type="text" placeholder="Ticket Number" name="ticket_no" maxlength="10" required>
+
+            <label for="weight"><b class="colorWhite">Weight:</b></label>
+            <input type="number" placeholder="Weight" name="weight" max="100" required>
+
+            <button type="submit" class="submit"><b class = "colorBlack">Submit</b></button><br><br>
+            </form>
+
+            <form action="/updateBaggage" method="POST" style="border:1px solid #ccc">
+            <h3 class="colorWhite"><b>Please fill in this form change weight of a bag:</b></h3>
+            <hr>
+
+            <label for="bag_no"><b class="colorWhite">Bag Number:</b></label>
+            <input type="text" placeholder="Bag Number" name="bag_no" max="1000" required>
+
+            <label for="weight"><b class="colorWhite">Weight:</b></label>
+            <input type="number" placeholder="Weight" name="weight" max="100" required>
+
+            <button type="submit" class="submit"><b class = "colorBlack">Submit</b></button><br><br>
+            </form>
+
+            <center><h3 class="colorWhite"><b>View Your Tickets:</b></h3></center>
+            <hr>
+            <form method="post" action="/getTickets">
+              <div class="row gtr-uniform">
+                <div class="col-6 col-12-xsmall">
+                  <input type="number" name="ssn" id="ssn" placeholder="Enter SSN" min="111111111" max="999999999" required/>
+                </div>
+                <div class="col-12">
+                  <ul class="actions">
+                    <li><input type="submit" value="Submit Form" class="primary" /></li>
+                    <li><input type="reset" value="Reset" /></li>
+                  </ul>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
 
