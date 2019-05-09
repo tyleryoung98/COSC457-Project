@@ -354,7 +354,7 @@ module.exports = function(){
   router.post('/getFlightData', function(req, res){
     //console.log(req.body);
     const{flight_no} = req.body;
-    db.getFlightData(flight_no).then(function(field){
+    db.getFlightData(flight_no).then(function(result){
       //console.log(JSON.stringify(field));
       var statement = "Flight_no | Takeoff Weight | Fuel | Callsign<br>";
       for(i=0;i<result.length;i++){
@@ -370,7 +370,7 @@ module.exports = function(){
   router.post('/getTickets', function(req, res){
     //console.log(req.body);
     const{ssn} = req.body;
-    db.getTickets(ssn).then(function(field){
+    db.getTickets(ssn).then(function(result){
       //console.log(JSON.stringify(field));
       var statement = "Flight Number | Ticket Number | Seat Class<br>";
       for(i=0;i<result.length;i++){
