@@ -171,7 +171,7 @@ module.exports = function(){
 
   router.get('/airplanes', function(req, res){
 		db.getAirplanes().then(function(field){
-      //console.log(JSON.stringify(field));
+      console.log(JSON.stringify(field));
 			res.json(field);
 		});
 	});//checked
