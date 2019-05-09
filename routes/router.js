@@ -137,23 +137,45 @@ module.exports = function(){
     });
   });//airplane - checked
 
+
+
   //------------------------GETS FOR SELECT-------------------------------------
   router.get('/flights', function(req, res){
+    console.log("test");
 		db.getFlights().then(function(field){
       //console.log(JSON.stringify(field));
 			res.json(field);
 		});
-	});
+	});//checked
 
   router.get('/airplanes', function(req, res){
 		db.getAirplanes().then(function(field){
       //console.log(JSON.stringify(field));
 			res.json(field);
 		});
-	});
+	});//checked
 
   router.get('/airports', function(req, res){
 		db.getAirports().then(function(field){
+      //console.log(JSON.stringify(field));
+			res.json(field);
+		});
+	});//checked
+
+  router.get('/pilots', function(req, res){
+		db.getPilots().then(function(field){
+      //console.log(JSON.stringify(field));
+			res.json(field);
+		});
+	});//checked
+  router.get('/companies', function(req, res){
+		db.getCompanies().then(function(field){
+      //console.log(JSON.stringify(field));
+			res.json(field);
+		});
+	});//checked
+  router.get('/maint_empl', function(req, res){
+		db.getEmployees().then(function(field){
       //console.log(JSON.stringify(field));
 			res.json(field);
 		});
@@ -164,13 +186,24 @@ module.exports = function(){
       //console.log(JSON.stringify(field));
 			res.json(field);
 		});
-	});
+	});//checked
   router.get('/closed_runways', function(req, res){
 		db.getClosedRunways().then(function(field){
       //console.log(JSON.stringify(field));
 			res.json(field);
 		});
-	});
+	});//checked
+
+
+  router.post('/specificAirport', function(req, res){
+    //console.log(req.body);
+    const{airport_Code} = req.body;
+    db.getAirportFlights(airport_Code).then(function(field){
+      //console.log(JSON.stringify(field));
+      res.send(JSON.stringify(field));
+    });
+  });//airplane - checked
+
 
   return router;
 }

@@ -2,6 +2,13 @@
 <html>
   <head>
     <title>Company</title>
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="../js/companies.js"></script>
+  	<script src="../js/maint_empl.js"></script>
+    <script src="../js/pilots.js"></script>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<meta name="description" content="" />
@@ -53,15 +60,40 @@
 
         <center>
             <table style="width:75%">
+            <h3><b>List of Companies</b></h3>
+            <tr>
+              <th>Company Name</th>
+              <th>Location</th>
+              <th>Phone</th>
+            </tr>
+            <ul id='companies' style="color: black"> </ul>
+            </table>
+
+            <table style="width:75%">
             <h3><b>List of Maintenence Employees</b></h3>
             <tr>
               <th>Employee ID</th>
               <th>First Name</th>
               <th>Last Name</th>
             </tr>
+            <ul id='maint_empl' style="color: black"> </ul>
+            </table>
 
+            <table style="width:75%">
+            <h3><b>List of Pilots</b></h3>
+            <tr>
+              <th>Employee ID</th>
+              <th>First Name</th>
+              <th>Last Name</th>
+              <th>Company</th>
+              <th>Flight Hours</th>
+              <th>Position</th>
+              <th>Flight Number</th>
+            </tr>
+            <ul id='pilots' style="color: black"> </ul>
             </table>
         </center>
+
 
         <br><br>
 

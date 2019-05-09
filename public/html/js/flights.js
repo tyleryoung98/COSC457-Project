@@ -3,15 +3,15 @@ $(document).ready(function(){
     method: 'GET',
     success: function(result){
       let flights = $('#flights');
-      for(i=0;i<result.length;i++){{
+      for(i=0;i<result.length;i++){
         $("<tr>"+
-          "<td>"+ result[i].flight_no+"</td>"+
-          "<td>"+ result[i].tail_no+"</td>"+
-          "<td>"+ result[i].origin+"</td>"+
-          "<td>"+ result[i].dest+"</td>"+
-          "<td>"+ result[i].to_time+"</td>"+
-          "<td>"+ result[i].land_time+"</td>"+
-          "<td>"+ result[i].seats+"</td>"+
+          "<td>"+ result[i].Flight_no+"</td>"+
+          "<td>"+ result[i].Tail_no+"</td>"+
+          "<td>"+ result[i].Origin+"</td>"+
+          "<td>"+ result[i].Dest+"</td>"+
+          "<td>"+ result[i].TO_Time+"</td>"+
+          "<td>"+ result[i].Land_Time+"</td>"+
+          "<td>"+ result[i].Seats+"</td>"+
           "</tr>").appendTo(flights);
       }
     }

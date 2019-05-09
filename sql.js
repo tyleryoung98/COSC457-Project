@@ -478,6 +478,55 @@ module.exports = class TableEdits{
     });
   }
 
+  getPilots(){
+    return new Promise((resolve,reject) => {
+      var quer= "SELECT * FROM PILOT;";
+      con.query(quer,function(err,result){
+        if(err){
+          console.log("Failed to select from PILOT");
+          reject();
+        }
+        else{
+          console.log("Info selected from PILOT");
+          //console.log(result)
+          resolve(result);
+        }
+      });
+    });
+  }
+  getCompanies(){
+    return new Promise((resolve,reject) => {
+      var quer= "SELECT * FROM COMPANY;";
+      con.query(quer,function(err,result){
+        if(err){
+          console.log("Failed to select from COMPANY");
+          reject();
+        }
+        else{
+          console.log("Info selected from COMPANY");
+          //console.log(result)
+          resolve(result);
+        }
+      });
+    });
+  }
+  getEmployees(){
+    return new Promise((resolve,reject) => {
+      var quer= "SELECT * FROM MAINTENANCE_EMPLOYEE;";
+      con.query(quer,function(err,result){
+        if(err){
+          console.log("Failed to select from MAINTENANCE_EMPLOYEE");
+          reject();
+        }
+        else{
+          console.log("Info selected from MAINTENANCE_EMPLOYEE");
+          //console.log(result)
+          resolve(result);
+        }
+      });
+    });
+  }
+
   getOpenRunways(){
     return new Promise((resolve,reject) => {
       var quer= "SELECT * FROM RUNWAY WHERE Open_Status=\"Open\" GROUP BY Airport_Code;";
@@ -504,6 +553,27 @@ module.exports = class TableEdits{
         }
         else{
           console.log("Info selected from RUNWAY");
+          //console.log(result)
+          resolve(result);
+        }
+      });
+    });
+  }
+
+
+
+
+  getAirportFlights(airport_Code){
+    return new Promise((resolve,reject) => {
+      var quer= "SELECT * FROM FLIGHTS WHERE Origin=\""+airport_Code+"\";";
+      //console.log(quer);
+      con.query(quer,function(err,result){
+        if(err){
+          console.log("Failed to select from FLIGHTS");
+          reject();
+        }
+        else{
+          console.log("Info selected from FLIGHTS");
           //console.log(result)
           resolve(result);
         }
