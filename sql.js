@@ -419,7 +419,7 @@ module.exports = class TableEdits{
                 }
                 else{
                   console.log("Updated FLIGHTDATA");
-                  resolve();
+                  resolve(bags);
                 }
               });
             }
